@@ -722,6 +722,11 @@
       "type": "info",
       "title": "Extractos crudos, no saponina pura",
       "text": "Las concentraciones están en % de extracto crudo. Su composición varía con la planta, el órgano y la cosecha, lo que complica la reproducibilidad de un excipiente."
+    },
+    {
+      "type": "warn",
+      "title": "Cifras del texto que no coinciden con las figuras",
+      "text": "En la figura 6a el lauril sulfato de sodio emulsiona cerca del 61 %, no el 69.8 % del texto; en la 6b la gota sobre cabello decolorado marca 45.7°, no 47.6°; y en la 4d la corteza de A. pennata está cerca de 53 mN/m, no 51.4. Son diferencias pequeñas, pero muestran que siempre hay que leer las figuras y no solo el texto."
     }
   ],
   "hlb": {

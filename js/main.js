@@ -169,6 +169,26 @@
     onScroll();
   }
 
+  // Ampliar las figuras originales del artículo
+  function initFigZoom() {
+    const dlg = document.createElement('dialog');
+    dlg.className = 'fig-lightbox';
+    dlg.innerHTML = '<button type="button" class="fig-lightbox__close" aria-label="Cerrar">×</button><img alt=""><p></p>';
+    document.body.appendChild(dlg);
+    const img = dlg.querySelector('img');
+    const cap = dlg.querySelector('p');
+    dlg.addEventListener('click', (e) => { if (e.target === dlg || e.target.closest('.fig-lightbox__close')) dlg.close(); });
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-zoom]');
+      if (!btn) return;
+      const src = btn.querySelector('img');
+      img.src = src.src;
+      img.alt = src.alt;
+      cap.textContent = src.alt;
+      if (typeof dlg.showModal === 'function') dlg.showModal(); else window.open(src.src, '_blank');
+    });
+  }
+
   /* -------------------------------------------------------
      5. Animación de aparición
      ------------------------------------------------------- */
@@ -725,6 +745,7 @@
     initTheme();
     initNav();
     initProgress();
+    initFigZoom();
     initTabs();
 
     let data;
