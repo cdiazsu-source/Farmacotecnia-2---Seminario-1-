@@ -1,0 +1,867 @@
+{
+  "meta": {
+    "title": "Taguchi optimization of multi-plant saponin-based natural surfactants from Northeast India for reduced contact angle, critical micelle concentration and enhanced wettability",
+    "titleEs": "Optimización Taguchi de tensioactivos naturales multiplanta a base de saponinas del noreste de India para reducir el ángulo de contacto y la concentración micelar crítica, y mejorar la humectabilidad",
+    "authors": [
+      "Vani G. Viswam",
+      "K. Jagajjanani Rao",
+      "Korumilli Tarangini",
+      "Sanjeeb Kalita",
+      "Debajit Mahanta"
+    ],
+    "affiliations": [
+      "Centre for Interfaces & Nanomaterials, Dept. of Biotechnology, Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology, Chennai, India",
+      "Centre for Biomaterials & Environmental Biotechnology, Vel Tech R&D Institute, Chennai, India",
+      "Translational Biotechnology Laboratory, DBT-APSCS&T Centre of Excellence for Bioresources and Sustainable Development, Kimin, Arunachal Pradesh, India"
+    ],
+    "journal": "Next Materials",
+    "volume": "12",
+    "articleNumber": "102197",
+    "year": 2026,
+    "publisher": "Elsevier Ltd.",
+    "license": "CC BY-NC-ND 4.0 (acceso abierto)",
+    "doi": "10.1016/j.nxmate.2026.102197",
+    "received": "5 de febrero de 2026",
+    "revised": "1 de mayo de 2026",
+    "accepted": "4 de mayo de 2026",
+    "online": "7 de mayo de 2026",
+    "keywords": [
+      "Saponinas",
+      "Tensioactivos naturales",
+      "Noreste de India",
+      "Optimización de humectabilidad",
+      "Diseño Taguchi"
+    ],
+    "funding": "Department of Biotechnology (DBT), Govt. of India — Grant BT/PR44300/NER/95/1873/2021"
+  },
+  "seminar": {
+    "title": "Nuevos agentes tensioactivos o sistemas emulsificantes aplicables a sistemas heterodispersos",
+    "course": "Farmacotecnia II",
+    "program": "Pregrado en Farmacia",
+    "university": "Universidad Nacional de Colombia",
+    "faculty": "Facultad de Ciencias — Departamento de Farmacia",
+    "members": [
+      "Cesar Diaz Suarez",
+      "Lina Ramirez",
+      "Diana Arguello",
+      "Sebastian Roa",
+      "Edward Benitez",
+      "Paula Melo"
+    ],
+    "period": "2026-02",
+    "professor": "Prof. Yolima Baena Aristizábal",
+    "date": "6 de octubre de 2026",
+    "group": "Grupo 1 · Seminario 1",
+    "code": "2029462"
+  },
+  "keyMetrics": [
+    {
+      "id": "ca",
+      "value": "74.0°",
+      "label": "Ángulo de contacto de la mezcla óptima",
+      "sub": "El modelo predijo 72.8°: diferencia de 1.2°"
+    },
+    {
+      "id": "cmc",
+      "value": "0.011 %",
+      "label": "Concentración micelar crítica más baja (cortezas)",
+      "sub": "Unas 20 veces menor que la del lauril sulfato de sodio (0.24 %)"
+    },
+    {
+      "id": "e24",
+      "value": "56.8 %",
+      "label": "Índice de emulsificación con aceite de coco",
+      "sub": "Lauril sulfato de sodio: 69.8 %"
+    },
+    {
+      "id": "hair",
+      "value": "−34°",
+      "label": "Caída del ángulo en cabello decolorado",
+      "sub": "81.7° con agua → 47.6° con la mezcla"
+    }
+  ],
+  "synthetic": {
+    "columns": [
+      "Criterio",
+      "Sintéticos (SLS, SLES, CAPB)",
+      "Saponinas naturales multiplanta"
+    ],
+    "rows": [
+      [
+        "Origen",
+        "Petroquímico / oleoquímico (sulfatación, etoxilación, amidación)",
+        "Metabolitos secundarios vegetales extraídos con agua caliente (121 °C, 15 min)"
+      ],
+      [
+        "Naturaleza química",
+        "Aniónicos (SLS, SLES) y anfótero (CAPB) de cadena alquílica lineal",
+        "Glicósidos anfifílicos: aglicona triterpénica/esteroidal + cadenas de azúcares (no iónicos o débilmente aniónicos por ácido glucurónico)"
+      ],
+      [
+        "CMC",
+        "SLS ≈ 0.20–0.24 % (≈ 8 mM)",
+        "0.011–0.024 % (extractos crudos al 10 %)"
+      ],
+      [
+        "Tensión superficial (1 %)",
+        "SLS ≈ 38 mN/m (la más baja)",
+        "46–68 mN/m (APL 46.2 mN/m la mejor)"
+      ],
+      [
+        "Espuma",
+        "Alta altura inicial; estabilidad variable",
+        "APL, ALL, ALP retienen > 90 % de la espuma a los 10 min"
+      ],
+      [
+        "Emulsificación (E24)",
+        "SLS 69.8 %",
+        "Mezcla óptima 56.8 %"
+      ],
+      [
+        "Perfil toxicológico",
+        "Irritación cutánea/ocular, desnaturalización de proteínas del estrato córneo, posible toxicidad dérmica crónica",
+        "Generalmente baja irritación a dosis cosméticas; algunas saponinas son hemolíticas (relevante si hay contacto con mucosas/heridas)"
+      ],
+      [
+        "Impacto ambiental",
+        "Ecotoxicidad acuática; SLES puede contener 1,4-dioxano (subproducto de etoxilación)",
+        "Biodegradables, renovables, valorización de biodiversidad regional"
+      ],
+      [
+        "Reproducibilidad",
+        "Alta (síntesis controlada)",
+        "Variable (especie, órgano, estación, suelo): requiere estandarización del extracto"
+      ]
+    ]
+  },
+  "plants": [
+    {
+      "species": "Albizia lucidior",
+      "authority": "(Steud.) I.C. Nielsen",
+      "family": "Fabaceae (Mimosoideae)",
+      "common": "Albizia de hoja lustrosa",
+      "note": "Árbol de bosques subtropicales del noreste de India. El estudio evaluó sus tres órganos (vaina, hoja y corteza), todos con espuma de alta estabilidad (grupo A de la mezcla).",
+      "color": "#40916c",
+      "parts": [
+        {
+          "code": "ALP",
+          "part": "Vaina",
+          "factor": "A",
+          "level": 1
+        },
+        {
+          "code": "ALL",
+          "part": "Hoja",
+          "factor": "A",
+          "level": 2
+        },
+        {
+          "code": "ALB",
+          "part": "Corteza",
+          "factor": "A",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "species": "Albizia chinensis",
+      "authority": "(Osbeck) Merr.",
+      "family": "Fabaceae (Mimosoideae)",
+      "common": "Siris chino",
+      "note": "Árbol de sombra frecuente en plantaciones de té. Su corteza fue la mejor del grupo A: concentración micelar crítica de 0.011 % y ángulo de 64.7°. La hoja no entró al diseño de la mezcla por su bajo contenido de saponinas y su espuma pobre.",
+      "color": "#1b4332",
+      "parts": [
+        {
+          "code": "ACL",
+          "part": "Hoja",
+          "factor": null,
+          "level": null,
+          "excluded": true
+        },
+        {
+          "code": "ACB",
+          "part": "Corteza",
+          "factor": "A",
+          "level": 4
+        }
+      ]
+    },
+    {
+      "species": "Acacia auriculiformis",
+      "authority": "A.Cunn. ex Benth.",
+      "family": "Fabaceae (Mimosoideae)",
+      "common": "Acacia de oreja · Akashmoni (bengalí)",
+      "note": "Especie naturalizada en la región. Sus vainas espiraladas, fuente conocida de acaciasidos, dieron el mayor contenido de saponinas del estudio (18.4 %) pero, paradójicamente, la concentración micelar crítica más alta (0.024 %).",
+      "color": "#d4a373",
+      "parts": [
+        {
+          "code": "AAP",
+          "part": "Vaina",
+          "factor": "B",
+          "level": 1
+        },
+        {
+          "code": "AAB",
+          "part": "Corteza",
+          "factor": "B",
+          "level": 2
+        },
+        {
+          "code": "AAL",
+          "part": "Hoja (filodio)",
+          "factor": "C",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "species": "Acacia pennata",
+      "authority": "(L.) Willd.",
+      "family": "Fabaceae (Mimosoideae)",
+      "common": "Acacia trepadora espinosa",
+      "note": "Liana espinosa de uso alimentario y tradicional. Su hoja produjo la menor tensión superficial (46.2 mN/m) y su corteza, el menor ángulo de contacto (64.1°).",
+      "color": "#2d6a4f",
+      "parts": [
+        {
+          "code": "APL",
+          "part": "Hoja",
+          "factor": "D",
+          "level": 1
+        },
+        {
+          "code": "APB",
+          "part": "Corteza",
+          "factor": "D",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "species": "Gymnocladus assamicus",
+      "authority": "U.N. Kanjilal ex P.C. Kanjilal",
+      "family": "Fabaceae (Caesalpinioideae)",
+      "common": "Endémica de Arunachal Pradesh",
+      "note": "Árbol raro y amenazado, endémico del noreste de India; comunidades locales usan tradicionalmente sus vainas como jabón y champú. Generó mucha espuma inicial (5.3 cm), pero casi toda colapsó en 10 minutos (2 % de estabilidad).",
+      "color": "#8a5a44",
+      "parts": [
+        {
+          "code": "GAP",
+          "part": "Vaina",
+          "factor": "C",
+          "level": 2
+        }
+      ]
+    }
+  ],
+  "extracts": {
+    "_note": "Valores leídos de las Fig. 1 y Fig. 4 del artículo (media, n = 3). Los valores citados textualmente en el artículo se respetan; el resto son lecturas gráficas aproximadas (±0.1 unidades).",
+    "order": [
+      "ALP",
+      "ALL",
+      "ALB",
+      "ACL",
+      "ACB",
+      "AAP",
+      "AAB",
+      "AAL",
+      "APL",
+      "APB",
+      "GAP"
+    ],
+    "names": {
+      "ALP": "A. lucidior · vaina",
+      "ALL": "A. lucidior · hoja",
+      "ALB": "A. lucidior · corteza",
+      "ACL": "A. chinensis · hoja",
+      "ACB": "A. chinensis · corteza",
+      "AAP": "A. auriculiformis · vaina",
+      "AAB": "A. auriculiformis · corteza",
+      "AAL": "A. auriculiformis · hoja",
+      "APL": "A. pennata · hoja",
+      "APB": "A. pennata · corteza",
+      "GAP": "G. assamicus · vaina"
+    },
+    "foam0": {
+      "ALP": 2.2,
+      "ALL": 3.1,
+      "ALB": 2.9,
+      "ACL": 1.3,
+      "ACB": 1.6,
+      "AAP": 6.3,
+      "AAB": 2.5,
+      "AAL": 1,
+      "APL": 3.9,
+      "APB": 4.9,
+      "GAP": 5.3
+    },
+    "foam10": {
+      "ALP": 2.05,
+      "ALL": 2.9,
+      "ALB": 2,
+      "ACL": 0.3,
+      "ACB": 1.3,
+      "AAP": 4.3,
+      "AAB": 1.7,
+      "AAL": 0.4,
+      "APL": 3.7,
+      "APB": 2.7,
+      "GAP": 0.1
+    },
+    "foamStability": {
+      "APL": 95,
+      "ALL": 93,
+      "ALP": 91,
+      "ACB": 81,
+      "ALB": 69,
+      "AAP": 68.5,
+      "AAB": 68.5,
+      "APB": 55,
+      "AAL": 40,
+      "ACL": 23,
+      "GAP": 2
+    },
+    "cmc": {
+      "APB": 0.011,
+      "ACB": 0.011,
+      "AAB": 0.011,
+      "AAL": 0.012,
+      "ALB": 0.012,
+      "ALL": 0.012,
+      "ALP": 0.012,
+      "ACL": 0.013,
+      "APL": 0.014,
+      "GAP": 0.019,
+      "AAP": 0.024
+    },
+    "saponin": {
+      "AAP": 18.4,
+      "GAP": 8.4,
+      "APB": 6.8,
+      "APL": 5.6,
+      "AAL": 5.5,
+      "ACB": 2.8,
+      "ALB": 2.6,
+      "AAB": 2.2,
+      "ACL": 2,
+      "ALL": 1.6,
+      "ALP": 1.3
+    },
+    "contactAngle": {
+      "APB": 64.1,
+      "ACB": 64.7,
+      "APL": 71.8,
+      "ALB": 74.4,
+      "ALP": 80,
+      "AAL": 84,
+      "AAB": 85.7,
+      "ALL": 88.7,
+      "AAP": 89,
+      "ACL": 92.6,
+      "GAP": 92.8
+    },
+    "surfaceTension": {
+      "APL": 46.2,
+      "ALP": 51.3,
+      "GAP": 51.4,
+      "APB": 53.1,
+      "ALB": 53.1,
+      "AAP": 53.1,
+      "ACL": 54.7,
+      "ACB": 58.1,
+      "ALL": 58.2,
+      "AAL": 60.1,
+      "AAB": 68.5
+    },
+    "sls": {
+      "cmc": 0.24,
+      "cmcText": 0.2,
+      "surfaceTension": 38,
+      "e24": 69.8
+    }
+  },
+  "ftir": {
+    "range": "4000–1000 cm⁻¹ (ATR, Agilent Cary 600)",
+    "bands": [
+      {
+        "range": [
+          3400,
+          3500
+        ],
+        "center": 3450,
+        "group": "O–H (tensión)",
+        "assign": "Hidroxilos de las unidades de azúcar (glicona) — banda ancha por puentes de hidrógeno",
+        "moiety": "Glicona"
+      },
+      {
+        "range": [
+          2900,
+          2950
+        ],
+        "center": 2925,
+        "group": "C–H alifático (tensión)",
+        "assign": "Grupos –CH₂– y –CH₃ del esqueleto de la aglicona (triterpeno)",
+        "moiety": "Aglicona"
+      },
+      {
+        "range": [
+          1650,
+          1700
+        ],
+        "center": 1675,
+        "group": "C=O (tensión)",
+        "assign": "Carbonilo de ésteres o ácidos carboxílicos (p. ej. C-28 esterificado, ácido glucurónico); solapa con C=C del Δ12-oleaneno",
+        "moiety": "Aglicona / unión éster"
+      },
+      {
+        "range": [
+          1400,
+          1460
+        ],
+        "center": 1430,
+        "group": "C–H (flexión)",
+        "assign": "Deformación de metilos y metilenos (gem-dimetilos del oleanano)",
+        "moiety": "Aglicona"
+      },
+      {
+        "range": [
+          1000,
+          1200
+        ],
+        "center": 1070,
+        "group": "C–O–C y C–OH",
+        "assign": "Enlaces glicosídicos (éter) y alcoholes secundarios de los azúcares — 'huella' de oligosacáridos",
+        "moiety": "Enlace glicosídico"
+      }
+    ]
+  },
+  "uv": {
+    "range": "245–495 nm (Cyberlab UV-100, cubeta de cuarzo)",
+    "summary": "Absorción ancha entre 245 y 295 nm con hombro en ≈ 280 nm que se extiende a ≈ 300 nm; atribuida a transiciones π→π* de sistemas insaturados de la aglicona (doble enlace Δ12 del oleanano, carbonilos conjugados), similar a Quillaja saponaria y Saponaria officinalis."
+  },
+  "lcms": {
+    "mode": "Agilent LC-MS, ionización por electrospray positivo (+ESI), fragmentador 135 V, energía de colisión 0",
+    "findings": [
+      {
+        "mz": "≈ 453",
+        "assign": "Ion fragmento dominante de la aglicona (sapogenina triterpénica tipo oleanano, [M+H−H₂O]⁺ / [M+H−2H₂O]⁺ de un ácido triterpénico C30)"
+      },
+      {
+        "mz": "≈ 302",
+        "assign": "Fragmento secundario por ruptura retro-Diels-Alder del anillo C (típica de Δ12-oleanenos)"
+      },
+      {
+        "mz": "700–900+",
+        "assign": "Saponinas intactas mono- y di-glicosiladas (pérdidas sucesivas de 162 Da = hexosa, 146 Da = desoxihexosa, 132 Da = pentosa, 176 Da = ácido glucurónico)"
+      }
+    ]
+  },
+  "taguchi": {
+    "design": "L8 (4¹ × 2³)",
+    "software": "MINITAB Release 14",
+    "concentration": "Cada extracto a 0.25 % p/v (mezcla total 1 % p/v)",
+    "response": "Ángulo de contacto (CA, °) sobre membrana de Teflón — 'menor es mejor'",
+    "factors": [
+      {
+        "id": "A",
+        "name": "Alta estabilidad de espuma",
+        "levels": [
+          "ALP",
+          "ALL",
+          "ALB",
+          "ACB"
+        ]
+      },
+      {
+        "id": "B",
+        "name": "Estabilidad de espuma moderada",
+        "levels": [
+          "AAP",
+          "AAB"
+        ]
+      },
+      {
+        "id": "C",
+        "name": "Baja estabilidad de espuma",
+        "levels": [
+          "AAL",
+          "GAP"
+        ]
+      },
+      {
+        "id": "D",
+        "name": "Bajo ángulo de contacto",
+        "levels": [
+          "APL",
+          "APB"
+        ]
+      }
+    ],
+    "trials": [
+      {
+        "run": 1,
+        "A": "ALP",
+        "B": "AAP",
+        "C": "AAL",
+        "D": "APL",
+        "ca": 80.2
+      },
+      {
+        "run": 2,
+        "A": "ALP",
+        "B": "AAB",
+        "C": "GAP",
+        "D": "APB",
+        "ca": 84.8
+      },
+      {
+        "run": 3,
+        "A": "ALL",
+        "B": "AAP",
+        "C": "AAL",
+        "D": "APB",
+        "ca": 76
+      },
+      {
+        "run": 4,
+        "A": "ALL",
+        "B": "AAB",
+        "C": "GAP",
+        "D": "APL",
+        "ca": 83
+      },
+      {
+        "run": 5,
+        "A": "ALB",
+        "B": "AAP",
+        "C": "GAP",
+        "D": "APL",
+        "ca": 85
+      },
+      {
+        "run": 6,
+        "A": "ALB",
+        "B": "AAB",
+        "C": "AAL",
+        "D": "APB",
+        "ca": 78
+      },
+      {
+        "run": 7,
+        "A": "ACB",
+        "B": "AAP",
+        "C": "GAP",
+        "D": "APB",
+        "ca": 78
+      },
+      {
+        "run": 8,
+        "A": "ACB",
+        "B": "AAB",
+        "C": "AAL",
+        "D": "APL",
+        "ca": 75
+      }
+    ],
+    "anova": {
+      "_note": "Tabla S4 del material suplementario reconstruida a partir de la Tabla 2 (sumas de cuadrados exactas); los valores p para C (0.047) y A (0.111) coinciden con los reportados en el texto.",
+      "rows": [
+        {
+          "source": "A",
+          "df": 3,
+          "ss": 42,
+          "ms": 14,
+          "f": 43.75,
+          "p": 0.111
+        },
+        {
+          "source": "B",
+          "df": 1,
+          "ss": 0.32,
+          "ms": 0.32,
+          "f": 1,
+          "p": 0.5
+        },
+        {
+          "source": "C",
+          "df": 1,
+          "ss": 58.32,
+          "ms": 58.32,
+          "f": 182.25,
+          "p": 0.047
+        },
+        {
+          "source": "D",
+          "df": 1,
+          "ss": 5.12,
+          "ms": 5.12,
+          "f": 16,
+          "p": 0.156
+        },
+        {
+          "source": "Error",
+          "df": 1,
+          "ss": 0.32,
+          "ms": 0.32,
+          "f": null,
+          "p": null
+        },
+        {
+          "source": "Total",
+          "df": 7,
+          "ss": 106.08,
+          "ms": null,
+          "f": null,
+          "p": null
+        }
+      ],
+      "r2": 99.7,
+      "r2adj": 97.9
+    },
+    "optimum": {
+      "levels": {
+        "A": "ACB",
+        "B": "AAP",
+        "C": "AAL",
+        "D": "APB"
+      },
+      "contributions": {
+        "A": 3.5,
+        "B": 0.2,
+        "C": 2.7,
+        "D": 0.8
+      },
+      "totalContribution": 7.2,
+      "grandMean": 80,
+      "predicted": 72.8,
+      "experimental": 74,
+      "errorPct": 1.2
+    }
+  },
+  "emulsification": {
+    "oil": "Aceite de coco 1:1 (p/p) · agitación 2000 rpm, 3 min · centrifugación 3200 rpm, 5 min",
+    "blend": 56.8,
+    "sls": 69.8,
+    "_note": "El texto reporta SLS = 69.8 %; la barra de la Fig. 6a se lee cerca de 61 %. Se usa el valor textual."
+  },
+  "hair": {
+    "method": "Gota sésil (2 µL) sobre mechones alineados; CA a 1 s y extensibilidad hasta 60 s; n = 3",
+    "bleach": "H₂O₂ 6 % + NH₄OH 2 % + ácido acético 0.5 % + EDTA 0.2 %",
+    "water": {
+      "virgin": 105.9,
+      "virginSD": 0.5,
+      "bleached": 81.7,
+      "bleachedSD": 0.8
+    },
+    "blend": {
+      "virgin": 73.3,
+      "bleached": 47.6
+    },
+    "literature": {
+      "virgin": "105 ± 5°",
+      "bleached": "78 ± 1°"
+    },
+    "spreading": {
+      "_note": "Lecturas aproximadas del recuadro de la Fig. 6b",
+      "t": [
+        1,
+        10,
+        20,
+        30,
+        40,
+        50,
+        60
+      ],
+      "virgin": [
+        73.3,
+        64,
+        59,
+        58,
+        51,
+        51,
+        47
+      ],
+      "bleached": [
+        47.6,
+        27,
+        22,
+        21,
+        20,
+        19,
+        17
+      ]
+    },
+    "fLayerRemoved": 85
+  },
+  "critique": [
+    {
+      "type": "info",
+      "title": "Lo mejor del artículo",
+      "text": "Lleva la teoría de tensioactivos (balance hidrofílico-lipofílico, concentración micelar crítica, mojado) a un producto real, y muestra que mezclar agentes tensioactivos puede funcionar mejor que usarlos por separado."
+    },
+    {
+      "type": "warn",
+      "title": "Solo optimizó una propiedad",
+      "text": "La mezcla se optimizó para el ángulo de contacto sobre teflón. Un champú o una emulsión necesitan además espuma, viscosidad, estabilidad en el tiempo, pH, conservación e irritación, y nada de eso se optimizó a la vez."
+    },
+    {
+      "type": "warn",
+      "title": "No supera al lauril sulfato de sodio en todo",
+      "text": "El lauril sulfato sigue bajando más la tensión superficial (38 frente a 46 mN/m) y emulsiona mejor (69.8 frente a 56.8 %). La ventaja de las saponinas es su concentración micelar crítica baja, su origen natural y la menor irritación esperada."
+    },
+    {
+      "type": "warn",
+      "title": "Estadística con poco margen",
+      "text": "El diseño de 8 mezclas deja un solo grado de libertad para el error, así que un ajuste del 99.7 % es casi automático. Además, el texto dice \"significativo al 90 %\" para p = 0.047, que en realidad también lo es al 95 %."
+    },
+    {
+      "type": "info",
+      "title": "Estabilidad de la emulsión con una prueba corta",
+      "text": "El índice de emulsificación se midió tras centrifugar 5 minutos. No hay seguimiento en el tiempo del cremado, la coalescencia ni el tamaño de gota, que es lo que pide un estudio de estabilidad."
+    },
+    {
+      "type": "info",
+      "title": "Extractos crudos, no saponina pura",
+      "text": "Las concentraciones están en % de extracto crudo. Su composición varía con la planta, el órgano y la cosecha, lo que complica la reproducibilidad de un excipiente."
+    }
+  ],
+  "hlb": {
+    "_note": "Valores de referencia típicos de tablas de Griffin/Martin/Aulton. Los de saponina son aproximados y dependen de la fuente y la pureza.",
+    "emulsifiers": [
+      {
+        "name": "Saponina de Quillaja (aproximado)",
+        "hlb": 15,
+        "type": "Natural, no iónico"
+      },
+      {
+        "name": "Polisorbato 80",
+        "hlb": 15,
+        "type": "No iónico"
+      },
+      {
+        "name": "Polisorbato 20",
+        "hlb": 16.7,
+        "type": "No iónico"
+      },
+      {
+        "name": "Monooleato de sorbitán (Span 80)",
+        "hlb": 4.3,
+        "type": "No iónico"
+      },
+      {
+        "name": "Monoestearato de sorbitán (Span 60)",
+        "hlb": 4.7,
+        "type": "No iónico"
+      },
+      {
+        "name": "Monoestearato de glicerilo",
+        "hlb": 3.8,
+        "type": "No iónico"
+      },
+      {
+        "name": "Lauril sulfato de sodio",
+        "hlb": 40,
+        "type": "Aniónico"
+      }
+    ],
+    "oils": [
+      {
+        "name": "Aceite de coco",
+        "req": 8
+      },
+      {
+        "name": "Aceite mineral (parafina líquida)",
+        "req": 10.5
+      },
+      {
+        "name": "Vaselina",
+        "req": 7
+      },
+      {
+        "name": "Aceite de ricino",
+        "req": 14
+      },
+      {
+        "name": "Alcohol cetílico",
+        "req": 15
+      },
+      {
+        "name": "Ácido esteárico",
+        "req": 15
+      }
+    ]
+  },
+  "conceptMap": [
+    {
+      "title": "Tensioactivos, balance hidrofílico-lipofílico y mojado",
+      "anchor": "tensioactivos",
+      "topics": [
+        "Clasificación de los tensioactivos por carga",
+        "Balance hidrofílico-lipofílico",
+        "Tensión interfacial",
+        "Adhesión, cohesión y extensión",
+        "Ángulo de contacto, mojado y repelencia"
+      ],
+      "article": "Las saponinas son tensioactivos naturales que se comparan con el lauril sulfato de sodio, el lauril éter sulfato de sodio y la cocamidopropil betaína. La propiedad que se optimiza es el ángulo de contacto, que mide directamente la capacidad humectante.",
+      "evidence": "Ángulos de 64° (corteza de A. pennata) a 93° (vaina de G. assamicus) en extractos al 1 %; 74.0° en la mezcla óptima."
+    },
+    {
+      "title": "Micelas, monocapas y películas mixtas",
+      "anchor": "micelas",
+      "topics": [
+        "Propiedades de las soluciones de tensioactivos",
+        "Monocapas y presión superficial",
+        "Películas simples y mixtas",
+        "Sistema micelar",
+        "Balance de una mezcla de emulgentes"
+      ],
+      "article": "La concentración micelar crítica y la tensión superficial describen cómo se comportan las saponinas en solución. La idea central del artículo, mezclar varios extractos, es el principio de las películas mixtas.",
+      "evidence": "Concentración micelar crítica de 0.011 a 0.024 % frente a 0.24 % del lauril sulfato; tensión de 46 a 68 mN/m frente a 38 mN/m."
+    },
+    {
+      "title": "Dispersiones de sólidos y coloides",
+      "anchor": "aplicaciones",
+      "topics": [
+        "Agente humectante",
+        "Coloides de asociación",
+        "Doble capa eléctrica",
+        "Floculación y desfloculación"
+      ],
+      "article": "Un ángulo de contacto bajo es la condición para dispersar un polvo hidrofóbico en una suspensión. Las micelas de saponina son coloides de asociación.",
+      "evidence": "El ángulo del cabello virgen, una superficie grasa, baja de 105.9° a 73.3°."
+    },
+    {
+      "title": "Viscoelasticidad de las interfases",
+      "anchor": "micelas",
+      "topics": [
+        "Viscoelasticidad",
+        "Películas interfaciales",
+        "Estabilidad de espumas"
+      ],
+      "article": "Que una espuma dure depende de películas interfaciales viscoelásticas. Las saponinas forman películas muy rígidas por los puentes de hidrógeno entre sus azúcares.",
+      "evidence": "Las hojas de A. pennata y A. lucidior y la vaina de A. lucidior conservan más del 90 % de la espuma a los 10 minutos."
+    },
+    {
+      "title": "Emulsiones y su estabilidad",
+      "anchor": "aplicaciones",
+      "topics": [
+        "Tipos de agentes emulsificantes",
+        "Balance requerido por la fase oleosa",
+        "Cremado, coalescencia, ruptura e inversión de fases",
+        "Pruebas de estabilidad"
+      ],
+      "article": "El índice de emulsificación con aceite de coco, medido tras agitar y centrifugar, es una prueba acelerada de estabilidad: indica qué fracción sigue emulsionada.",
+      "evidence": "56.8 % emulsionado con la mezcla frente a 69.8 % con lauril sulfato de sodio."
+    },
+    {
+      "title": "Formulación de un producto",
+      "anchor": "taguchi",
+      "topics": [
+        "Bases emulsionadas y productos cosméticos",
+        "Selección de excipientes",
+        "Diseño de experimentos"
+      ],
+      "article": "El objetivo aplicado es un champú, un sistema heterodisperso cosmético. El diseño estadístico muestra cómo optimizar una mezcla de excipientes con pocos lotes.",
+      "evidence": "8 mezclas preparadas en lugar de 32; el modelo explica el 99.7 % de la variación."
+    }
+  ]
+}

@@ -1,0 +1,626 @@
+{
+  "categories": [
+    {
+      "id": "farmacotecnia",
+      "label": "Sistemas heterodispersos",
+      "icon": "pill"
+    },
+    {
+      "id": "fisicoquimica",
+      "label": "Fisicoquímica de interfases",
+      "icon": "atom"
+    },
+    {
+      "id": "botanica",
+      "label": "Saponinas y plantas",
+      "icon": "leaf"
+    },
+    {
+      "id": "estadistica",
+      "label": "Diseño de formulación",
+      "icon": "bar-chart-3"
+    },
+    {
+      "id": "aplicacion",
+      "label": "Aplicación cosmética",
+      "icon": "flask-conical"
+    },
+    {
+      "id": "analitica",
+      "label": "Métodos del artículo",
+      "icon": "scan-line"
+    }
+  ],
+  "terms": [
+    {
+      "term": "Saponina",
+      "category": "botanica",
+      "short": "Glicósido anfifílico vegetal capaz de formar espuma estable en agua (del latín sapo, jabón).",
+      "long": "Metabolito secundario formado por una aglicona hidrofóbica (sapogenina triterpénica de 30 carbonos o esteroidal de 27) unida mediante enlaces glicosídicos a una o más cadenas de azúcares hidrofílicas. Esta arquitectura anfifílica explica su adsorción en interfases, la reducción de la tensión superficial, la formación de micelas y la espuma. Se encuentran en más de 500 especies (Fabaceae, Sapindaceae, Quillajaceae, Caryophyllaceae, entre otras).",
+      "related": [
+        "Aglicona (sapogenina)",
+        "Glicona",
+        "Tensioactivo (surfactante)"
+      ]
+    },
+    {
+      "term": "Aglicona (sapogenina)",
+      "category": "botanica",
+      "short": "Porción no azucarada, hidrofóbica, de un glicósido; en las saponinas es un triterpeno o un esteroide.",
+      "long": "Se obtiene por hidrólisis ácida o enzimática de la saponina. En las saponinas triterpénicas suele ser un esqueleto pentacíclico de 30 carbonos (oleanano, ursano, lupano), con frecuencia oxidado en C-28 a ácido carboxílico y con doble enlace Δ12. En las esteroidales es un esqueleto C27 (espirostano o furostano). La aglicona aporta la 'cola' lipofílica rígida y voluminosa que se ancla en la fase oleosa o en el aire.",
+      "related": [
+        "Triterpenoide (oleanano)",
+        "Saponina esteroidal"
+      ]
+    },
+    {
+      "term": "Glicona",
+      "category": "botanica",
+      "short": "Porción glucídica (oligosacárido) de un glicósido; aporta la hidrofilia.",
+      "long": "Cadenas de 1 a 11 unidades de monosacáridos (glucosa, galactosa, ramnosa, xilosa, arabinosa, ácido glucurónico) unidas a la aglicona normalmente en C-3 (y en C-28 por enlace éster en las bidesmosídicas). El número, la ramificación y la carga (ácido glucurónico) de los azúcares determinan el tamaño de la cabeza polar, el balance hidrofílico-lipofílico, la concentración micelar crítica y la geometría de empaquetamiento en la interfase.",
+      "related": [
+        "Monodesmosídica / bidesmosídica",
+        "Balance hidrofílico-lipofílico"
+      ]
+    },
+    {
+      "term": "Triterpenoide (oleanano)",
+      "category": "botanica",
+      "short": "Compuesto C30 derivado del escualeno; el oleanano es un esqueleto pentacíclico 6-6-6-6-6.",
+      "long": "Los triterpenos se biosintetizan por ciclación del 2,3-oxidoescualeno mediante oxidoescualeno ciclasas (p. ej. β-amirina sintasa → serie oleanano). El oleanano posee cinco anillos de seis miembros (A–E), gem-dimetilos en C-4 y C-20 y habitualmente un doble enlace Δ12. Ejemplos: ácido oleanólico, ácido acácico (frecuente en Albizia y Acacia), quilaico. En el artículo, los fragmentos cromatografía líquida con espectrometría de masas en m/z ≈ 453 y ≈ 302 se atribuyeron a agliconas tipo oleanano.",
+      "related": [
+        "Aglicona (sapogenina)",
+        "Cromatografía líquida con espectrometría de masas"
+      ]
+    },
+    {
+      "term": "Saponina esteroidal",
+      "category": "botanica",
+      "short": "Saponina cuya aglicona es un esteroide C27 (espirostano o furostano).",
+      "long": "Derivan del colesterol. El espirostano tiene seis anillos (A–F) con un espirocetal en C-22; el furostano tiene el anillo F abierto y suele portar glucosa en C-26. Predominan en monocotiledóneas (Dioscorea, Yucca, Agave, Smilax). Tienen una cola más plana y compacta que los triterpenos y suelen interactuar fuertemente con el colesterol de membranas (actividad hemolítica).",
+      "related": [
+        "Triterpenoide (oleanano)",
+        "Aglicona (sapogenina)"
+      ]
+    },
+    {
+      "term": "Monodesmosídica / bidesmosídica",
+      "category": "botanica",
+      "short": "Saponina con una (mono-) o dos (bi-) cadenas de azúcar unidas a la aglicona.",
+      "long": "Las monodesmosídicas (azúcar solo en C-3) son más hemolíticas y en general mejores espumantes; las bidesmosídicas (C-3 y éster en C-28) son más hidrofílicas, con mayor concentración micelar crítica y menor actividad de membrana. La diversidad de glicosilación detectada por cromatografía líquida con espectrometría de masas (iones m/z 700–900+) explica por qué extractos con igual contenido total de saponinas difieren en desempeño.",
+      "related": [
+        "Glicona",
+        "Concentración micelar crítica"
+      ]
+    },
+    {
+      "term": "Balance hidrofílico-lipofílico",
+      "category": "fisicoquimica",
+      "short": "Escala empírica (0–20) del equilibrio entre la parte polar y la apolar de un tensioactivo.",
+      "long": "Según Griffin, balance hidrofílico-lipofílico = 20·Mₕ/M (Mₕ = masa de la porción hidrofílica). Valores 3–6 favorecen emulsiones agua en aceite; 8–18, emulsiones aceite en agua; 13–15, detergencia; 15–18, solubilización. En saponinas, cada azúcar adicional aumenta Mₕ y el balance hidrofílico-lipofílico; por ejemplo, la saponina de Quillaja tiene balance hidrofílico-lipofílico ≈ 15–16. Las saponinas bidesmosídicas o con ácido glucurónico son más hidrofílicas. El concepto es central en Farmacotecnia para seleccionar emulgentes según el balance hidrofílico-lipofílico requerido de la fase oleosa.",
+      "formula": "\\text{Balance} = 20\\,\\frac{M_{\\text{hidrofílica}}}{M_{\\text{total}}}",
+      "related": [
+        "Glicona",
+        "Emulsión / sistema heterodisperso"
+      ]
+    },
+    {
+      "term": "Tensioactivo (surfactante)",
+      "category": "fisicoquimica",
+      "short": "Sustancia anfifílica que se adsorbe en interfases y reduce la energía libre interfacial.",
+      "long": "Se clasifican por la carga de la cabeza polar: aniónicos (lauril sulfato de sodio, lauril éter sulfato de sodio), catiónicos (cetrimonio), anfóteros (cocamidopropil betaína) y no iónicos (polisorbatos, saponinas mayormente). Funciones farmacotécnicas: humectantes (wetting agents), emulgentes, espumantes, solubilizantes, detergentes y estabilizantes de suspensiones.",
+      "related": [
+        "Concentración micelar crítica",
+        "Tensión superficial"
+      ]
+    },
+    {
+      "term": "Concentración micelar crítica",
+      "category": "fisicoquimica",
+      "short": "Concentración a partir de la cual los monómeros del tensioactivo se autoensamblan en micelas.",
+      "long": "Por debajo de esta concentración la tensión superficial cae linealmente con el logaritmo de la concentración (adsorción de Gibbs); por encima se mantiene casi constante porque los monómeros adicionales forman micelas. Un valor bajo indica mayor eficiencia: se necesita menos tensioactivo para saturar la interfase. En el artículo, las cortezas de A. pennata, A. chinensis y A. auriculiformis alcanzaron 0.011 %, frente a 0.24 % del lauril sulfato de sodio.",
+      "formula": "\\Delta G^\\circ_{\\text{micelización}} \\approx RT\\ln X_{\\text{crítica}}",
+      "related": [
+        "Micela",
+        "Solubilización de naftaleno"
+      ]
+    },
+    {
+      "term": "Micela",
+      "category": "fisicoquimica",
+      "short": "Agregado coloidal dinámico de moléculas de tensioactivo con un núcleo hidrofóbico.",
+      "long": "En agua, las colas se orientan hacia el interior y las cabezas hacia el solvente. Su formación está impulsada por el efecto hidrofóbico (ganancia de entropía del agua). Las saponinas forman micelas pequeñas y polidispersas (números de agregación bajos) por el gran volumen de su aglicona. Las micelas solubilizan fármacos lipofílicos, base de muchas formulaciones líquidas.",
+      "related": [
+        "Concentración micelar crítica"
+      ]
+    },
+    {
+      "term": "Tensión superficial",
+      "category": "fisicoquimica",
+      "short": "Trabajo necesario para aumentar en una unidad el área de una superficie líquida (mN/m).",
+      "long": "Surge del desbalance de fuerzas cohesivas sobre las moléculas de la superficie. El agua pura tiene unos 72 mN/m a 25 °C. Los tensioactivos la reducen al adsorberse en la interfase aire-agua, según la isoterma de adsorción de Gibbs. En el estudio, el lauril sulfato de sodio llegó a unos 38 mN/m y los extractos al 1 % quedaron entre 46 (hoja de A. pennata) y 68.5 mN/m (corteza de A. auriculiformis).",
+      "formula": "\\Gamma = -\\frac{1}{nRT}\\,\\frac{d\\gamma}{d\\ln C}",
+      "related": [
+        "Método de la placa de Wilhelmy",
+        "Ángulo de contacto"
+      ]
+    },
+    {
+      "term": "Ángulo de contacto",
+      "category": "fisicoquimica",
+      "short": "Ángulo θ formado entre la superficie sólida y la tangente a la gota en la línea triple.",
+      "long": "Cuantifica la humectabilidad: θ menor de 90° indica una superficie que se moja; mayor de 90°, una que repele el líquido; cercano a 0°, extensión completa. Depende del balance de tensiones entre sólido y vapor, sólido y líquido, y líquido y vapor (ecuación de Young). Un tensioactivo reduce θ al disminuir la tensión líquido–vapor y la tensión sólido–líquido. Fue la propiedad que se optimizó en el diseño de la mezcla.",
+      "formula": "\\cos\\theta = \\frac{\\gamma_{\\text{sólido-vapor}}-\\gamma_{\\text{sólido-líquido}}}{\\gamma_{\\text{líquido-vapor}}}",
+      "related": [
+        "Ecuación de Young",
+        "Humectabilidad",
+        "Método de la gota sésil"
+      ]
+    },
+    {
+      "term": "Ecuación de Young",
+      "category": "fisicoquimica",
+      "short": "Balance de fuerzas en la línea de contacto trifásica de una gota en equilibrio.",
+      "long": "La tensión sólido–vapor es igual a la tensión sólido–líquido más la tensión líquido–vapor multiplicada por cos θ. Combinada con el trabajo de adhesión da la ecuación de Young–Dupré: trabajo de adhesión = tensión líquido–vapor × (1 + cos θ). El coeficiente de extensión predice extensión espontánea si es mayor o igual a cero. Supone una superficie ideal (lisa, homogénea y rígida); en superficies rugosas, como el cabello decolorado, se aplican los modelos de Wenzel (cos θ* = r·cos θ) y de Cassie–Baxter.",
+      "formula": "\\gamma_{\\text{sólido-vapor}} = \\gamma_{\\text{sólido-líquido}} + \\gamma_{\\text{líquido-vapor}}\\cos\\theta",
+      "related": [
+        "Ángulo de contacto",
+        "Humectabilidad"
+      ]
+    },
+    {
+      "term": "Humectabilidad",
+      "category": "fisicoquimica",
+      "short": "Capacidad de un líquido para mantener contacto con un sólido y extenderse sobre él.",
+      "long": "Resultado de la competencia entre fuerzas adhesivas (líquido-sólido) y cohesivas (líquido-líquido). En Farmacotecnia es crítica en la preparación de suspensiones (polvos hidrofóbicos flotan si θ > 90°), granulación húmeda, disolución de comprimidos y distribución de champús o cremas sobre piel y cabello.",
+      "related": [
+        "Ángulo de contacto",
+        "Agente humectante"
+      ]
+    },
+    {
+      "term": "Agente humectante",
+      "category": "aplicacion",
+      "short": "Tensioactivo que reduce el ángulo de contacto entre un sólido y un líquido para facilitar su mojado.",
+      "long": "Se usa en suspensiones orales y tópicas (polisorbato 80, lauril sulfato de sodio, docusato), en granulación y en champús. Desplaza el aire adsorbido en la superficie de las partículas. Los extractos de saponina estudiados actúan como humectantes naturales: la mezcla óptima redujo el ángulo de contacto del cabello virgen de 105.9° a 73.3°.",
+      "related": [
+        "Humectabilidad",
+        "Tensioactivo (surfactante)"
+      ]
+    },
+    {
+      "term": "Método de la gota sésil",
+      "category": "analitica",
+      "short": "Medición óptica del ángulo de contacto de una gota depositada sobre un sólido.",
+      "long": "Se deposita una gota de volumen conocido (2 microlitros en el estudio) y una cámara registra su perfil; el software ajusta la forma de la gota con la ecuación de Young–Laplace para obtener θ. En el estudio se midió sobre teflón (superficie hidrofóbica de referencia) y sobre mechones de cabello.",
+      "related": [
+        "Ángulo de contacto"
+      ]
+    },
+    {
+      "term": "Método de la placa de Wilhelmy",
+      "category": "analitica",
+      "short": "Técnica tensiométrica que mide la fuerza ejercida por el líquido sobre una placa de platino.",
+      "long": "La placa rugosa de platino se moja totalmente (θ cercano a 0°) y la fuerza medida es F = γ·P·cos θ, donde P es el perímetro mojado. Es un método estático, preciso y estable en el tiempo. En el estudio se midió a 25 ± 2 °C.",
+      "formula": "\\gamma = \\frac{F}{P\\cos\\theta}",
+      "related": [
+        "Tensión superficial"
+      ]
+    },
+    {
+      "term": "Ensayo de espuma de Ross y Miles",
+      "category": "analitica",
+      "short": "Prueba normalizada de la capacidad y la estabilidad espumante de los detergentes.",
+      "long": "Se dejan caer 200 mL de solución desde una altura fija sobre la misma solución, en una columna a temperatura constante, y se mide la altura de espuma al inicio y a los 5 y 10 minutos. La estabilidad se expresa como el porcentaje de altura que se conserva. Las hojas de A. pennata y A. lucidior y la vaina de A. lucidior conservaron más del 90 % a los 10 minutos.",
+      "formula": "\\text{Estabilidad}(\\%) = \\frac{h_{10\\,\\text{min}}}{h_{0}}\\times 100",
+      "related": [
+        "Estabilidad de espuma"
+      ]
+    },
+    {
+      "term": "Estabilidad de espuma",
+      "category": "fisicoquimica",
+      "short": "Resistencia de una espuma al drenaje, la coalescencia y la maduración de Ostwald.",
+      "long": "Depende de la elasticidad superficial (efecto Gibbs–Marangoni), la viscosidad superficial y la repulsión entre películas. Las saponinas forman películas interfaciales muy viscoelásticas por puentes de hidrógeno entre sus azúcares, lo que explica espumas muy persistentes. En el diseño Taguchi, los extractos se agruparon como factores según su estabilidad de espuma (alta, moderada, baja).",
+      "related": [
+        "Ensayo de espuma de Ross y Miles"
+      ]
+    },
+    {
+      "term": "Método Taguchi",
+      "category": "estadistica",
+      "short": "Estrategia de diseño de experimentos robusto basada en arreglos ortogonales y relaciones señal/ruido.",
+      "long": "Desarrollado por Genichi Taguchi para la ingeniería de calidad. Usa fracciones balanceadas de un diseño factorial para estimar efectos principales con pocos ensayos, asumiendo interacciones despreciables. Sus etapas: definir respuesta y factores, elegir arreglo ortogonal, ejecutar, analizar medias y relación señal/ruido, análisis de varianza, predecir el óptimo con el modelo aditivo y confirmarlo experimentalmente.",
+      "formula": "\\hat{y}_{opt} = \\bar{T} + \\sum_{i}\\left(\\bar{y}_{i,opt}-\\bar{T}\\right)",
+      "related": [
+        "Arreglo ortogonal de 8 ensayos",
+        "Relación señal/ruido"
+      ]
+    },
+    {
+      "term": "Arreglo ortogonal de 8 ensayos",
+      "category": "estadistica",
+      "short": "Matriz de 8 corridas en la que cada par de columnas contiene todas las combinaciones de niveles con igual frecuencia.",
+      "long": "El arreglo estándar de 8 ensayos tiene 7 columnas de 2 niveles. Al combinar tres columnas se obtiene una de 4 niveles, y resulta el arreglo mixto del estudio: el grupo A con 4 opciones (vaina, hoja y corteza de A. lucidior, y corteza de A. chinensis) y los grupos B, C y D con 2 opciones cada uno. Un diseño completo requeriría 4 × 2 × 2 × 2 = 32 mezclas; el arreglo usa solo 8 (25 %).",
+      "related": [
+        "Método Taguchi",
+        "Grados de libertad"
+      ]
+    },
+    {
+      "term": "Relación señal/ruido",
+      "category": "estadistica",
+      "short": "Métrica logarítmica (dB) que combina media y variabilidad de la respuesta; siempre se maximiza.",
+      "long": "Taguchi define tres tipos: 'menor es mejor' (contaminantes, ángulo de contacto), 'mayor es mejor' (rendimiento) y 'nominal es mejor'. Para 'menor es mejor', relación señal/ruido = −10·log₁₀(Σy²/n). Un nivel con relación señal/ruido más alto (menos negativo) produce valores pequeños y consistentes.",
+      "formula": "\text{señal/ruido} = -10log_{10}left(\frac{1}{n}sum_{i=1}^{n} y_i^2\right)",
+      "related": [
+        "Método Taguchi"
+      ]
+    },
+    {
+      "term": "Análisis de varianza",
+      "category": "estadistica",
+      "short": "Método estadístico que reparte la variabilidad total entre lo que explica cada factor y lo que queda como error.",
+      "long": "La suma de cuadrados total es igual a la de cada factor más la del error. Para cada factor se calcula F = cuadrado medio del factor / cuadrado medio del error, donde el cuadrado medio es la suma de cuadrados dividida entre los grados de libertad. El valor p indica la probabilidad de obtener un F tan grande si el factor no tuviera efecto. El porcentaje de contribución muestra la importancia relativa: en este estudio, grupo C cerca de 55 %, grupo A cerca de 40 %, grupo D cerca de 5 % y grupo B 0.3 %.",
+      "formula": "F = \\frac{\\text{cuadrado medio del factor}}{\\text{cuadrado medio del error}}",
+      "related": [
+        "Valor p",
+        "Coeficiente de determinación"
+      ]
+    },
+    {
+      "term": "Valor p",
+      "category": "estadistica",
+      "short": "Probabilidad, bajo la hipótesis nula, de obtener un resultado al menos tan extremo como el observado.",
+      "long": "Se compara con α (0.05 o 0.10). Grupo C: p = 0.047 → significativo a α = 0.05. Grupo A: p = 0.111 → no significativo ni a α = 0.10, aunque con efecto apreciable. Con 1 grados de libertad de error la potencia es baja, por lo que efectos reales pueden no alcanzar significancia.",
+      "related": [
+        "Análisis de varianza"
+      ]
+    },
+    {
+      "term": "Coeficiente de determinación",
+      "category": "estadistica",
+      "short": "Fracción de la variabilidad de la respuesta explicada por el modelo.",
+      "long": "R² = 1 − (suma de cuadrados del error / suma de cuadrados total). El R² ajustado corrige por el número de términos del modelo. En el estudio, R² = 99.7 % y R²_aj = 97.9 %. Con un diseño casi saturado (1 grados de libertad de error), un R² alto es esperable y debe interpretarse con cautela.",
+      "formula": "R^2 = 1-\\frac{\\text{suma de cuadrados del error}}{\\text{suma de cuadrados total}}",
+      "related": [
+        "Análisis de varianza"
+      ]
+    },
+    {
+      "term": "Efecto principal",
+      "category": "estadistica",
+      "short": "Cambio promedio de la respuesta al pasar un factor de un nivel a otro.",
+      "long": "En un arreglo ortogonal se calcula como el promedio de las mezclas que contienen esa opción, menos el promedio general. En el artículo, la corteza de A. chinensis (76.5°) y la hoja de A. auriculiformis (77.3°) son las opciones que más bajan el ángulo de contacto respecto del promedio de 80.0°.",
+      "related": [
+        "Método Taguchi"
+      ]
+    },
+    {
+      "term": "Grados de libertad",
+      "category": "estadistica",
+      "short": "Número de comparaciones independientes disponibles para estimar un parámetro.",
+      "long": "Para un factor de k niveles, grados de libertad = k − 1. En el arreglo de 8 ensayos: A (3) + B (1) + C (1) + D (1) = 6 de los 7 grados de libertad totales, dejando solo 1 grados de libertad para el error. Por eso Taguchi recomienda a menudo 'agrupar' (pooling) los factores no significativos con el error.",
+      "related": [
+        "Arreglo ortogonal de 8 ensayos"
+      ]
+    },
+    {
+      "term": "Índice de emulsificación",
+      "category": "analitica",
+      "short": "Porcentaje de la altura total ocupada por la capa emulsionada tras reposo o centrifugación.",
+      "long": "índice de emulsificación = (altura de la capa emulsionada / altura total) × 100, medido tradicionalmente tras 24 h. En el estudio se mezcló la solución óptima con aceite de coco 1:1, se agitó a 2000 rpm por 3 min y se centrifugó a 3200 rpm por 5 min: índice de emulsificación = 56.8 % (lauril sulfato de sodio: 69.8 %).",
+      "formula": "\\text{Índice} = \\frac{h_{\\text{emulsión}}}{h_{\\text{total}}}\\times 100",
+      "related": [
+        "Emulsión / sistema heterodisperso"
+      ]
+    },
+    {
+      "term": "Emulsión / sistema heterodisperso",
+      "category": "aplicacion",
+      "short": "Sistema de dos fases inmiscibles en el que una se dispersa como gotas en la otra, estabilizado por un emulgente.",
+      "long": "Los sistemas heterodispersos (emulsiones, suspensiones, espumas) son termodinámicamente inestables por su gran área interfacial (ΔG = γ·ΔA). Los emulgentes reducen γ y forman una barrera (estérica, electrostática o película viscoelástica). Las saponinas estabilizan principalmente por película interfacial rígida y repulsión estérica de sus azúcares; Quillaja ya se usa como emulgente aprobado en alimentos como aditivo alimentario.",
+      "formula": "\\Delta G = \\gamma\\,\\Delta A",
+      "related": [
+        "Balance hidrofílico-lipofílico",
+        "Índice de emulsificación"
+      ]
+    },
+    {
+      "term": "Capa lipídica F del cabello",
+      "category": "aplicacion",
+      "short": "Monocapa de ácido 18-metileicosanoico unida covalentemente a la epicutícula del cabello; lo vuelve hidrofóbico.",
+      "long": "El ácido 18-metileicosanoico (C21 ramificado anteiso) se une por enlaces tioéster a residuos de cisteína de las proteínas de la epicutícula, formando la 'capa F' (≈ 1–3 nm). Es responsable del alto ángulo de contacto del cabello virgen (≈ 105°), de su baja fricción y de su repelencia al agua.",
+      "related": [
+        "Decoloración alcalina",
+        "Cutícula capilar"
+      ]
+    },
+    {
+      "term": "Decoloración alcalina",
+      "category": "aplicacion",
+      "short": "Tratamiento oxidante (agua oxigenada en medio amoniacal) que degrada la melanina y daña la cutícula.",
+      "long": "A pH cercano a 9–10, el agua oxigenada y el álcali rompen los enlaces tioéster que anclan el ácido 18-metileicosanoico (en el estudio se reporta la remoción de cerca del 85 % de la capa F) y oxidan la cistina a ácido cisteico, que tiene carga negativa. La superficie queda aniónica, más polar, rugosa y porosa, por lo que el ángulo de contacto con agua baja (105.9° a 81.7°) y el tensioactivo se extiende mejor (47.6° con la mezcla óptima).",
+      "related": [
+        "Capa lipídica F del cabello"
+      ]
+    },
+    {
+      "term": "Cutícula capilar",
+      "category": "aplicacion",
+      "short": "Capa externa del cabello formada por 5–10 escamas superpuestas de queratina altamente entrecruzada.",
+      "long": "Cada célula cuticular tiene, de afuera hacia adentro: capa F (ácido 18-metileicosanoico), epicutícula, capa A (rica en cistina), exocutícula y endocutícula. Protege la corteza (donde está la melanina) y define las propiedades superficiales: brillo, fricción, humectabilidad y adsorción de activos de champús y acondicionadores.",
+      "related": [
+        "Capa lipídica F del cabello"
+      ]
+    },
+    {
+      "term": "Espectroscopia ultravioleta-visible",
+      "category": "analitica",
+      "short": "Medición de la absorción de radiación 190–800 nm por transiciones electrónicas.",
+      "long": "Sigue la ley de Lambert–Beer (A = ε·b·c). Las saponinas carecen de cromóforos fuertes; su absorción (≈ 200–300 nm) proviene de transiciones π→π* y n→π* de dobles enlaces aislados (Δ12) y carbonilos. En el estudio, los extractos mostraron absorción ancha 245–295 nm con hombro en ≈ 280 nm; parte de la señal puede deberse a polifenoles coextraídos.",
+      "formula": "A = \\varepsilon\\, b\\, c",
+      "related": [
+        "Ensayo vainillina–ácido sulfúrico"
+      ]
+    },
+    {
+      "term": "Espectroscopia infrarroja",
+      "category": "analitica",
+      "short": "Técnica que identifica grupos funcionales por la forma en que vibran al absorber radiación infrarroja.",
+      "long": "Se usó la modalidad de reflectancia total atenuada, que mide la muestra directamente sobre un cristal, sin prepararla en pastillas. En las saponinas aparecen bandas de los hidroxilos de los azúcares (3400–3500), de los enlaces carbono–hidrógeno de la aglicona (2900–2950), de los carbonilos (1650–1700) y de los enlaces glicosídicos (1000–1200 por centímetro).",
+      "related": [
+        "Saponina"
+      ]
+    },
+    {
+      "term": "Cromatografía líquida con espectrometría de masas",
+      "category": "analitica",
+      "short": "Técnica que separa los componentes de una mezcla y luego los identifica por su masa.",
+      "long": "La cromatografía separa los componentes; la fuente de electrospray los convierte en iones con carga positiva de forma suave. Las saponinas pierden sus azúcares uno a uno hasta dejar la aglicona. El estudio detectó un fragmento dominante de aglicona tipo oleanano (relación masa/carga cercana a 453) y glicósidos completos de mayor tamaño (700 a más de 900).",
+      "related": [
+        "Triterpenoide (oleanano)"
+      ]
+    },
+    {
+      "term": "Ensayo vainillina–ácido sulfúrico",
+      "category": "analitica",
+      "short": "Método colorimétrico para cuantificar saponinas totales (absorbancia a ≈ 544 nm).",
+      "long": "En ácido sulfúrico concentrado, la aglicona se deshidrata y reacciona con la vainillina dando un color rojo-violeta que se lee a 544 nm, comparado con un estándar de saponina de Quillaja. Es rápido pero poco selectivo: esteroles y otros triterpenos también reaccionan.",
+      "related": [
+        "Saponina",
+        "Espectroscopia ultravioleta-visible"
+      ]
+    },
+    {
+      "term": "Extracción hidrotermal",
+      "category": "botanica",
+      "short": "Extracción con agua a alta temperatura y presión (autoclave, 121 °C, 15 min).",
+      "long": "Técnica 'verde' sin solventes orgánicos: el agua caliente presurizada disminuye su constante dieléctrica y viscosidad, mejorando la penetración y solubilización de glicósidos. Riesgo: hidrólisis parcial de enlaces éster (C-28) en exposiciones prolongadas, por eso se usan tiempos cortos. Luego: filtración Whatman N.º 1, centrifugación a 6000 rpm y liofilización.",
+      "related": [
+        "Saponina"
+      ]
+    },
+    {
+      "term": "Solubilización de naftaleno",
+      "category": "analitica",
+      "short": "Método indirecto de concentración micelar crítica: la solubilidad de una sonda hidrofóbica aumenta bruscamente al formarse micelas.",
+      "long": "Se añade naftaleno (stock 400 mM en metanol, < 1 % de metanol final), se equilibra 24 h, se centrifuga y se mide a 274 nm. Al graficar naftaleno solubilizado vs concentración de tensioactivo, el quiebre corresponde a la concentración micelar crítica. Es comparativo y puede desviarse de los métodos tensiométricos o conductimétricos.",
+      "related": [
+        "Concentración micelar crítica"
+      ]
+    },
+    {
+      "term": "Lauril sulfato de sodio",
+      "category": "aplicacion",
+      "short": "Tensioactivo aniónico C12 sulfatado; referencia de comparación del estudio.",
+      "long": "Excipiente farmacéutico muy usado (humectante en comprimidos y suspensiones, detergente en pastas dentales y champús). concentración micelar crítica ≈ 8 mM (≈ 0.23 %). Es un irritante modelo en dermatología: desnaturaliza queratina y altera los lípidos del estrato córneo, aumentando la pérdida transepidérmica de agua.",
+      "related": [
+        "Lauril éter sulfato de sodio",
+        "Cocamidopropil betaína"
+      ]
+    },
+    {
+      "term": "Lauril éter sulfato de sodio",
+      "category": "aplicacion",
+      "short": "Versión etoxilada del lauril sulfato de sodio, menos irritante, base de la mayoría de champús.",
+      "long": "La etoxilación (1–3 unidades de óxido de etileno) aumenta el tamaño de la cabeza polar, reduce la irritación y mejora la tolerancia al agua dura. Puede contener trazas de 1,4-dioxano, subproducto de la etoxilación, por lo que se purifica por arrastre al vacío.",
+      "related": [
+        "Lauril sulfato de sodio"
+      ]
+    },
+    {
+      "term": "Cocamidopropil betaína",
+      "category": "aplicacion",
+      "short": "Tensioactivo anfótero derivado del aceite de coco, usado como co-tensioactivo suavizante.",
+      "long": "Reduce la irritación de los aniónicos, aumenta la viscosidad y estabiliza la espuma. Se ha asociado a dermatitis alérgica de contacto, atribuida principalmente a impurezas de síntesis (amidoamina y dimetilaminopropilamina).",
+      "related": [
+        "Lauril sulfato de sodio"
+      ]
+    },
+    {
+      "term": "Sinergia en mezclas de tensioactivos",
+      "category": "fisicoquimica",
+      "short": "Desempeño de una mezcla superior al esperado por el promedio de sus componentes.",
+      "long": "Según la teoría de soluciones regulares (Rubingh), un parámetro de interacción β < 0 indica atracción entre tensioactivos distintos y una concentración micelar crítica de la mezcla menor que la ideal. En las mezclas de saponinas, agliconas de distinta hidrofobicidad y azúcares de distinta longitud se empaquetan de forma complementaria en la interfase, reduciendo la energía libre de micelización y mejorando la humectación.",
+      "formula": "\\frac{1}{C^*_{\\text{mezcla}}} = \\sum_i \\frac{\\alpha_i}{f_i\\,C^*_i}\\quad (C^* = \\text{concentración micelar crítica})",
+      "related": [
+        "Concentración micelar crítica"
+      ]
+    },
+    {
+      "term": "Biodegradabilidad",
+      "category": "aplicacion",
+      "short": "Capacidad de una sustancia de ser mineralizada por microorganismos.",
+      "long": "Las saponinas son fácilmente biodegradables (glicósidos hidrolizables por glicosidasas microbianas). Los tensioactivos sintéticos lineales también se degradan, pero sus residuos y la carga en aguas residuales presentan ecotoxicidad para organismos acuáticos, motivo central del interés por alternativas naturales.",
+      "related": [
+        "Saponina"
+      ]
+    },
+    {
+      "term": "Hotspot de biodiversidad",
+      "category": "botanica",
+      "short": "Región con alta riqueza de especies endémicas y fuerte pérdida de hábitat.",
+      "long": "El noreste de India forma parte de los hotspots Indo-Birmania e Himalaya. Su flora incluye numerosas especies endémicas y amenazadas (como Gymnocladus assamicus), lo que obliga a plantear la bioprospección con criterios de sostenibilidad, cultivo y distribución justa de beneficios (Protocolo de Nagoya).",
+      "related": [
+        "Saponina"
+      ]
+    },
+    {
+      "term": "Sistema heterodisperso",
+      "category": "farmacotecnia",
+      "short": "Sistema de dos o más fases en el que una fase está dispersa en otra (suspensiones, emulsiones, espumas, semisólidos).",
+      "long": "Se caracteriza por una gran área interfacial y, por tanto, por una energía libre superficial alta (ΔG = γ·ΔA): es termodinámicamente inestable y tiende a reducir esa área (sedimentar, cremar, coalescer). Los tensioactivos son los excipientes que bajan γ y estabilizan la interfase. El seminario muestra un nuevo tensioactivo natural para estos sistemas.",
+      "formula": "\\Delta G = \\gamma\\,\\Delta A",
+      "related": [
+        "Emulsión / sistema heterodisperso",
+        "Suspensión farmacéutica",
+        "Tensioactivo (surfactante)"
+      ]
+    },
+    {
+      "term": "Suspensión farmacéutica",
+      "category": "farmacotecnia",
+      "short": "Dispersión de un sólido insoluble finamente dividido en un vehículo líquido o semisólido.",
+      "long": "Su formulación requiere: humectar el sólido (agente humectante que baje el ángulo de contacto), controlar el tamaño de partícula, controlar la floculación (electrolitos, carga superficial) y aumentar la viscosidad del vehículo (agentes suspensores). Un extracto de saponina con θ bajo podría actuar como humectante natural de polvos hidrofóbicos.",
+      "related": [
+        "Agente humectante",
+        "Floculación y desfloculación",
+        "Humectabilidad"
+      ]
+    },
+    {
+      "term": "Floculación y desfloculación",
+      "category": "farmacotecnia",
+      "short": "Estado de agregación laxa (floculado) o de partículas individuales (desfloculado) en una dispersión.",
+      "long": "Un sistema floculado sedimenta rápido pero forma un sedimento voluminoso y fácil de redispersar; uno desfloculado sedimenta lento pero forma un \"apelmazamiento\" (caking) difícil de redispersar. Se controla con electrolitos, tensioactivos iónicos y polímeros que modifican la carga y la doble capa eléctrica. Las saponinas con ácido glucurónico aportan carga negativa.",
+      "related": [
+        "Doble capa eléctrica y potencial zeta",
+        "Suspensión farmacéutica"
+      ]
+    },
+    {
+      "term": "Doble capa eléctrica y potencial zeta",
+      "category": "farmacotecnia",
+      "short": "Distribución de iones alrededor de una partícula cargada; el potencial zeta es el potencial en el plano de cizalla.",
+      "long": "Determina la repulsión electrostática entre partículas o gotas (teoría de Derjaguin, Landau, Verwey y Overbeek). |ζ| alto (> 30 mV) favorece la estabilidad de dispersiones desfloculadas. Los tensioactivos iónicos se adsorben y modifican ζ; las saponinas estabilizan más por efecto estérico (azúcares voluminosos) que por carga.",
+      "related": [
+        "Floculación y desfloculación"
+      ]
+    },
+    {
+      "term": "Coloides de asociación",
+      "category": "farmacotecnia",
+      "short": "Coloides que se forman espontáneamente por autoasociación de moléculas anfifílicas (micelas).",
+      "long": "A diferencia de los coloides liofílicos (polímeros) y liofóbicos (partículas), aparecen solo por encima de la concentración micelar crítica. Las micelas de saponina son coloides de asociación y explican la solubilización de sustancias lipofílicas, como el naftaleno usado en el artículo para medir la concentración micelar crítica.",
+      "related": [
+        "Micela",
+        "Concentración micelar crítica"
+      ]
+    },
+    {
+      "term": "Trabajo de adhesión y de cohesión",
+      "category": "fisicoquimica",
+      "short": "Energía para separar dos fases distintas (adhesión) o dos porciones de la misma fase (cohesión).",
+      "long": "trabajo de adhesión = γ₁ + γ₂ − γ₁₂ y trabajo de cohesión = 2γ. Para un líquido sobre un sólido, trabajo de adhesión = γ_LV(1 + cos θ). Un líquido se extiende cuando la adhesión al sólido supera su propia cohesión: S = trabajo de adhesión − trabajo de cohesión ≥ 0. Los tensioactivos bajan la cohesión del agua (γ_LV) y facilitan la extensión.",
+      "formula": "S = W_{\\text{adhesión}} - W_{\\text{cohesión}}",
+      "related": [
+        "Coeficiente de extensión",
+        "Ecuación de Young"
+      ]
+    },
+    {
+      "term": "Coeficiente de extensión",
+      "category": "fisicoquimica",
+      "short": "S = tensión sólido–vapor − tensión sólido–líquido − tensión líquido–vapor; si es positivo el líquido se extiende espontáneamente.",
+      "long": "Es el criterio para saber si un líquido moja completamente un sólido (o se extiende sobre otro líquido). En el artículo, la \"extensibilidad\" (spreadability) en cabello se siguió como la caída del ángulo de contacto entre 1 y 60 s: de 73.3° a ≈ 47° en cabello virgen y de 47.6° a ≈ 17° en decolorado.",
+      "formula": "S = \\gamma_{\\text{sólido-vapor}} - \\gamma_{\\text{sólido-líquido}} - \\gamma_{\\text{líquido-vapor}}",
+      "related": [
+        "Trabajo de adhesión y de cohesión",
+        "Humectabilidad"
+      ]
+    },
+    {
+      "term": "Monocapa y presión superficial",
+      "category": "fisicoquimica",
+      "short": "Capa de una molécula de espesor de tensioactivo adsorbido; la presión superficial es π = γ₀ − γ.",
+      "long": "La presión superficial mide cuánto baja la tensión del solvente puro por la monocapa. Saponinas con agliconas voluminosas forman monocapas muy compactas y rígidas (alta elasticidad superficial), lo que se traduce en espumas y emulsiones estables.",
+      "formula": "\\pi = \\gamma_0 - \\gamma",
+      "related": [
+        "Películas mixtas",
+        "Tensión superficial"
+      ]
+    },
+    {
+      "term": "Películas mixtas",
+      "category": "fisicoquimica",
+      "short": "Películas interfaciales formadas por dos o más tensioactivos que se empaquetan juntos.",
+      "long": "Una película mixta puede ser más compacta y estable que la de cada componente (por ejemplo, alcohol cetílico + lauril sulfato de sodio en la teoría de Schulman). Es el fundamento de la \"sinergia\" que propone el artículo: saponinas con distinta aglicona y distinto número de azúcares llenan mejor la interfase y bajan la concentración micelar crítica y el ángulo de contacto.",
+      "related": [
+        "Sinergia en mezclas de tensioactivos",
+        "Monocapa y presión superficial"
+      ]
+    },
+    {
+      "term": "Balance hidrofílico-lipofílico requerido",
+      "category": "farmacotecnia",
+      "short": "Valor balance hidrofílico-lipofílico que necesita una fase oleosa para emulsionarse de forma óptima (aceite en agua o agua en aceite).",
+      "long": "Cada aceite tiene un balance hidrofílico-lipofílico requerido (p. ej. aceite mineral ≈ 10.5 para aceite en agua). Se alcanza mezclando un emulgente de balance hidrofílico-lipofílico alto con uno de balance hidrofílico-lipofílico bajo: HLB_mezcla = x_A·HLB_A + x_B·HLB_B. El artículo optimiza una mezcla de tensioactivos, igual que se hace al ajustar el balance hidrofílico-lipofílico de mezcla en el laboratorio.",
+      "formula": "x_A = \\frac{\\text{Balance}_{\\text{requerido}}-\\text{Balance}_B}{\\text{Balance}_A-\\text{Balance}_B}",
+      "related": [
+        "Balance hidrofílico-lipofílico"
+      ]
+    },
+    {
+      "term": "Cremado y sedimentación",
+      "category": "farmacotecnia",
+      "short": "Separación de las gotas de una emulsión por diferencia de densidad, sin que se fusionen.",
+      "long": "Es reversible con agitación. Su velocidad sigue la ley de Stokes, v = 2r²(ρ₁ − ρ₂)g / 9η: se reduce con gotas pequeñas, densidades similares y mayor viscosidad de la fase externa. La centrifugación usada para el índice de emulsificación acelera precisamente este proceso.",
+      "formula": "v = \\frac{2r^2(\\rho_1-\\rho_2)g}{9\\eta}",
+      "related": [
+        "Coalescencia y ruptura",
+        "Índice de emulsificación"
+      ]
+    },
+    {
+      "term": "Coalescencia y ruptura",
+      "category": "farmacotecnia",
+      "short": "Fusión irreversible de gotas que termina en la separación total de fases (ruptura o \"cracking\").",
+      "long": "Ocurre cuando la película interfacial se adelgaza y se rompe. Se previene con películas interfaciales rígidas y elásticas, repulsión estérica o eléctrica y emulgentes con balance hidrofílico-lipofílico adecuado. La película viscoelástica de las saponinas es su principal mecanismo contra la coalescencia.",
+      "related": [
+        "Cremado y sedimentación",
+        "Inversión de fases"
+      ]
+    },
+    {
+      "term": "Inversión de fases",
+      "category": "farmacotecnia",
+      "short": "Cambio de una emulsión aceite en agua a agua en aceite o viceversa.",
+      "long": "Puede ocurrir por cambio en la relación de fases, en la temperatura (temperatura de inversión de fases de los no iónicos) o en el balance hidrofílico-lipofílico del emulgente (adición de electrolitos o de un segundo tensioactivo). Según la regla de Bancroft, la fase en la que el emulgente es más soluble tiende a ser la externa: las saponinas, muy hidrosolubles, favorecen aceite en agua.",
+      "related": [
+        "Emulsión / sistema heterodisperso",
+        "Balance hidrofílico-lipofílico requerido"
+      ]
+    },
+    {
+      "term": "Viscoelasticidad interfacial",
+      "category": "farmacotecnia",
+      "short": "Respuesta elástica y viscosa de una película interfacial frente a la deformación.",
+      "long": "Una interfase viscoelástica resiste el adelgazamiento de las películas entre burbujas o gotas (efecto de Gibbs y Marangoni). Las saponinas forman películas muy elásticas por los puentes de hidrógeno entre sus azúcares, lo que explica que las hojas de A. pennata y A. lucidior y la vaina de A. lucidior conserven más del 90 % de la espuma a los 10 minutos.",
+      "related": [
+        "Estabilidad de espuma",
+        "Películas mixtas"
+      ]
+    },
+    {
+      "term": "Diseño de experimentos",
+      "category": "estadistica",
+      "short": "Planificación estadística de ensayos para estudiar varios factores de formulación a la vez con pocos lotes.",
+      "long": "Es la base del desarrollo por calidad (calidad desde el diseño). Los arreglos ortogonales de Taguchi, los factoriales y las superficies de respuesta permiten saber qué excipiente pesa más en una propiedad crítica. En el artículo, 8 lotes reemplazan a los 32 de un factorial completo.",
+      "related": [
+        "Método Taguchi",
+        "Arreglo ortogonal de 8 ensayos"
+      ]
+    }
+  ]
+}

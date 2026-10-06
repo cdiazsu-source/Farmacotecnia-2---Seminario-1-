@@ -1,0 +1,752 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Saponinas Multiplanta · Seminario Farmacotecnia II</title>
+  <meta name="description" content="Seminario de Farmacotecnia II, Universidad Nacional de Colombia: nuevos agentes tensioactivos para sistemas heterodispersos, a partir de Viswam y colaboradores (2026), Next Materials." />
+
+  <!-- Aplica el tema guardado antes de pintar para evitar parpadeo -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('sem-theme');
+        if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&family=Merriweather:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet" />
+
+  <!-- KaTeX (fórmulas) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+  <!-- Chart.js e iconos Lucide -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <script defer src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+
+  <link rel="icon" href="assets/img/escudo-unal.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#resumen">Saltar al contenido</a>
+
+  <!-- ===================================================== -->
+  <!-- PORTADA                                               -->
+  <!-- ===================================================== -->
+  <section id="portada" class="cover" aria-label="Portada del seminario">
+    <div class="cover__band" aria-hidden="true"></div>
+    <div class="cover__inner">
+      <div class="cover__top">
+        <figure class="crest" aria-label="Escudo de la Universidad Nacional de Colombia">
+          <img src="assets/img/escudo-unal.svg" alt="Escudo de la Universidad Nacional de Colombia" class="crest__img"
+               onerror="this.parentElement.classList.add('crest--empty'); this.remove();" />
+          <div class="crest__placeholder">
+            <i data-lucide="shield"></i>
+            <span>Escudo de la<br />universidad</span>
+          </div>
+        </figure>
+        <div class="cover__inst">
+          <p class="cover__univ" data-bind="seminar.university">Universidad Nacional de Colombia</p>
+          <p class="cover__fac" data-bind="seminar.faculty">Facultad de Ciencias — Departamento de Farmacia</p>
+          <p class="cover__prog"><span data-bind="seminar.program">Pregrado en Farmacia</span> · <strong data-bind="seminar.course">Farmacotecnia II</strong></p>
+        </div>
+      </div>
+
+      <div class="cover__center">
+        <p class="eyebrow">Seminario 1 · Grupo 1</p>
+        <h1 class="cover__title" data-bind="seminar.title">Nuevos agentes tensioactivos o sistemas emulsificantes aplicables a sistemas heterodispersos</h1>
+        <div class="cover__rule" aria-hidden="true"></div>
+        <p class="cover__label">Artículo científico analizado</p>
+        <p class="cover__paper"><em data-bind="meta.title">Taguchi optimization of multi-plant saponin-based natural surfactants from Northeast India for reduced contact angle, critical micelle concentration and enhanced wettability</em></p>
+        <p class="cover__cite">Viswam V.G., Rao K.J., Tarangini K., Kalita S., Mahanta D. · <em>Next Materials</em> 12 (2026) 102197</p>
+      </div>
+
+      <div class="cover__bottom">
+        <div>
+          <p class="cover__label">Integrantes</p>
+          <ul class="members" id="members-list">
+            <li>Cesar Diaz Suarez</li><li>Lina Ramirez</li><li>Diana Arguello</li>
+            <li>Sebastian Roa</li><li>Edward Benitez</li><li>Paula Melo</li>
+          </ul>
+        </div>
+        <div class="cover__meta">
+          <p><span class="cover__label">Docente</span><br /><strong data-bind="seminar.professor">Prof. Yolima Baena Aristizábal</strong></p>
+          <p><span class="cover__label">Fecha</span><br /><strong data-bind="seminar.date">6 de octubre de 2026</strong></p>
+        </div>
+      </div>
+
+      <a href="#resumen" class="cover__scroll" aria-label="Ir al contenido">
+        <span>Iniciar</span><i data-lucide="chevron-down"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- BARRA DE NAVEGACIÓN                                   -->
+  <!-- ===================================================== -->
+  <header class="topbar" id="topbar">
+    <div class="topbar__inner">
+      <a href="#portada" class="brand" aria-label="Volver a la portada">
+        <span class="brand__mark"><img src="assets/img/escudo-unal.svg" alt="" /></span>
+        <span class="brand__text">Saponinas <b>Multiplanta</b></span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Secciones">
+        <a href="#resumen">Resumen</a>
+        <a href="#conceptos">Conceptos</a>
+        <a href="#tensioactivos">Tensioactivos</a>
+        <a href="#interfases">Interfases</a>
+        <a href="#micelas">Micelas</a>
+        <a href="#articulo">El estudio</a>
+        <a href="#taguchi">Formulación</a>
+        <a href="#aplicaciones">Aplicaciones</a>
+        <a href="#simulador">Simulador</a>
+        <a href="#glosario">Glosario</a>
+        <a href="#cierre">Cierre</a>
+      </nav>
+      <div class="topbar__actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Cambiar tema claro/oscuro" title="Tema claro / oscuro">
+          <i data-lucide="moon" class="only-light"></i><i data-lucide="sun" class="only-dark"></i>
+        </button>
+        <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+    <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================================================== -->
+    <!-- 1. RESUMEN                                            -->
+    <!-- ===================================================== -->
+    <section id="resumen" class="section section--hero">
+      <div class="container">
+        <div class="hero">
+          <div class="hero__text reveal">
+            <p class="eyebrow"><span class="tag">1</span> El artículo en una frase</p>
+            <h2 class="hero__title">Un tensioactivo natural <span class="accent">hecho de varias plantas</span>, formulado para mojar mejor</h2>
+            <p class="lead">Los autores extraen saponinas de cinco plantas del noreste de India y, en lugar de usar un solo extracto, <strong>mezclan cuatro</strong> buscando la combinación que mejor humecta (el menor ángulo de contacto). Luego prueban esa mezcla en una <strong>emulsión</strong> y sobre <strong>cabello</strong>, y la comparan con el lauril sulfato de sodio, el tensioactivo de la mayoría de los champús.</p>
+
+            <dl class="biblio" id="biblio">
+              <div><dt>Autores</dt><dd data-bind-list="meta.authors">Viswam V.G., Rao K.J., Tarangini K., Kalita S., Mahanta D.</dd></div>
+              <div><dt>Revista</dt><dd><em>Next Materials</em>, volumen 12, artículo 102197 (Elsevier, 2026)</dd></div>
+              <div><dt>Enlace</dt><dd><a href="https://doi.org/10.1016/j.nxmate.2026.102197" target="_blank" rel="noopener" class="mono">doi.org/10.1016/j.nxmate.2026.102197</a></dd></div>
+              <div><dt>Publicado</dt><dd>Mayo de 2026 · acceso abierto</dd></div>
+            </dl>
+          </div>
+
+          <div class="hero__metrics reveal" id="metrics"><!-- paper-data.json → keyMetrics --></div>
+        </div>
+
+        <div class="why reveal">
+          <h3><i data-lucide="graduation-cap"></i> ¿Por qué este artículo?</h3>
+          <div class="why__grid">
+            <div><b>Es un tensioactivo nuevo</b><p>Las saponinas son una alternativa natural al lauril sulfato de sodio, al lauril éter sulfato de sodio y a la cocamidopropil betaína.</p></div>
+            <div><b>Pone a prueba la teoría</b><p>Balance hidrofílico-lipofílico, tensión superficial, concentración micelar crítica, ángulo de contacto, mojado y extensión, todo con datos reales.</p></div>
+            <div><b>Llega a sistemas heterodispersos</b><p>Prueba la mezcla como emulsificante (aceite de coco) y como humectante sobre un sustrato real (cabello).</p></div>
+            <div><b>Enseña a formular mezclas</b><p>Combina tensioactivos con un diseño estadístico, igual que cuando se combinan dos emulgentes para alcanzar un balance determinado.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- 2. MAPA DE CONCEPTOS                                  -->
+    <!-- ===================================================== -->
+    <section id="conceptos" class="section section--tint">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow"><span class="tag">2</span> Hoja de ruta</p>
+          <h2>Los conceptos que el artículo pone en práctica</h2>
+          <p class="section__intro">El artículo recorre la fisicoquímica de los tensioactivos y termina en la formulación de sistemas heterodispersos. Pulse cada concepto para ver qué aporta el estudio y con qué dato lo demuestra.</p>
+        </header>
+        <div class="syllabus reveal">
+          <div class="syllabus__weeks" id="syllabus-weeks" role="tablist" aria-label="Conceptos"></div>
+          <div class="syllabus__detail card" id="syllabus-detail" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- 3. TENSIOACTIVOS Y BALANCE HIDROFÍLICO-LIPOFÍLICO     -->
+    <!-- ===================================================== -->
+    <section id="tensioactivos" class="section">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow"><span class="tag">3</span> Los agentes tensioactivos</p>
+          <h2>Las saponinas como tensioactivos: estructura, clasificación y balance hidrofílico-lipofílico</h2>
+          <p class="section__intro">Todo tensioactivo tiene una parte que "quiere" agua y otra que la evita. Las saponinas cumplen esa regla, pero con una arquitectura muy distinta a la de los tensioactivos sintéticos.</p>
+        </header>
+
+        <div class="grid-2 reveal">
+          <div class="prose">
+            <h3>Una molécula anfifílica de origen vegetal</h3>
+            <p>Una saponina tiene una <strong>aglicona</strong> (también llamada sapogenina), que es la parte <strong>lipofílica</strong>: un esqueleto rígido de varios anillos. Unidas a ella hay una o dos cadenas de <strong>azúcares (glicona)</strong>, que son la parte <strong>hidrofílica</strong>.</p>
+            <ul class="ticks">
+              <li><b>Triterpénicas (30 carbonos, tipo oleanano)</b>: típicas de leguminosas como <em>Acacia</em> y <em>Albizia</em>. Son las que se encontraron en este estudio.</li>
+              <li><b>Esteroidales (27 carbonos)</b>: derivan del colesterol y son típicas de <em>Yucca</em>, <em>Dioscorea</em> y <em>Agave</em>.</li>
+              <li><b>Mono- o bidesmosídicas</b>: tienen una o dos cadenas de azúcar. Cuantos más azúcares, más hidrofílica es la molécula.</li>
+            </ul>
+            <p>Frente al lauril sulfato de sodio, cuya cola es una cadena de 12 carbonos flexible, la saponina tiene una cola voluminosa y plana y una cabeza polar enorme. Por eso forma <strong>películas interfaciales muy rígidas</strong>, que es su gran ventaja para estabilizar espumas y emulsiones.</p>
+          </div>
+          <figure class="figure">
+            <div class="mol-switch" role="group" aria-label="Tipo de aglicona">
+              <button class="chip is-active" data-mol="tri" type="button">Triterpénica (oleanano)</button>
+              <button class="chip" data-mol="ste" type="button">Esteroidal (espirostano)</button>
+            </div>
+            <div id="mol-svg" class="mol-svg" aria-live="polite"></div>
+            <figcaption id="mol-caption"></figcaption>
+          </figure>
+        </div>
+
+        <div class="table-wrap reveal">
+          <table class="table table--class">
+            <caption>Clasificación de los tensioactivos según la carga de la cabeza polar</caption>
+            <thead><tr><th>Tipo</th><th>Ejemplos usados en champús y formas farmacéuticas</th><th>Papel en el artículo</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Aniónicos</th><td>Lauril sulfato de sodio, lauril éter sulfato de sodio, jabones</td><td>El lauril sulfato de sodio es el <b>patrón de comparación</b>: baja mucho la tensión superficial, pero irrita la piel y genera carga ambiental</td></tr>
+              <tr><th scope="row">Catiónicos</th><td>Cloruro de cetrimonio, cloruro de benzalconio</td><td>No se estudian; en champús se usan como acondicionadores</td></tr>
+              <tr><th scope="row">Anfóteros</th><td>Cocamidopropil betaína</td><td>Co-tensioactivo sintético que se quiere reemplazar</td></tr>
+              <tr class="is-highlight"><th scope="row">No iónicos</th><td>Polisorbatos, ésteres de sorbitán, <b>saponinas</b> (algunas débilmente aniónicas por el ácido glucurónico)</td><td><b>Las saponinas multiplanta</b> son la propuesta del estudio: naturales y biodegradables</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="grid-2 grid-2--wide reveal">
+          <div class="prose">
+            <h3>El balance hidrofílico-lipofílico</h3>
+            <p>Esta escala ordena los tensioactivos de 0 a 20 según cuánto pesa su parte polar dentro de la molécula. Según Griffin:</p>
+            <div class="formula">\[ \text{Balance} = 20\,\frac{M_{\text{hidrofílica}}}{M_{\text{total}}} \]</div>
+            <p>Valores de 3 a 6: emulgentes de agua en aceite · 7 a 9: humectantes · 8 a 18: emulgentes de aceite en agua · 13 a 15: detergentes · 15 a 18: solubilizantes.</p>
+            <p>Las saponinas, con varias unidades de azúcar, quedan en la zona alta de la escala (la de <em>Quillaja</em> se reporta alrededor de 15). Por eso son buenos humectantes, detergentes y emulgentes de aceite en agua. El artículo no midió este valor, pero lo refleja de forma indirecta: la vaina de <em>A. auriculiformis</em> tiene la mayor cantidad de saponinas (18.4 %) y aun así la peor concentración micelar crítica. La <em>estructura</em> pesa tanto como la <em>cantidad</em>.</p>
+            <h4>Balance de una mezcla de emulgentes</h4>
+            <div class="formula">\[ \text{Balance}_{\text{mezcla}} = x_A\,\text{Balance}_A + x_B\,\text{Balance}_B \]</div>
+            <p>El artículo hace algo análogo: <b>mezcla cuatro tensioactivos naturales</b> en proporciones iguales y busca la combinación con mejor desempeño.</p>
+          </div>
+          <div class="hlb-calc card" id="hlb-calc">
+            <h3><i data-lucide="calculator"></i> Calculadora del balance requerido</h3>
+            <p class="muted small">Elija una fase oleosa y dos emulgentes: la calculadora reparte las proporciones para alcanzar el balance hidrofílico-lipofílico que pide ese aceite.</p>
+            <label class="field">Fase oleosa (balance requerido para aceite en agua)<select id="hlb-oil"></select></label>
+            <div class="field-row">
+              <label class="field">Emulgente de balance alto<select id="hlb-a"></select></label>
+              <label class="field">Emulgente de balance bajo<select id="hlb-b"></select></label>
+            </div>
+            <div class="hlb-bar" aria-hidden="true"><span id="hlb-bar-a"></span><span id="hlb-bar-b"></span></div>
+            <div class="hlb-out" id="hlb-out"></div>
+            <p class="muted small">Valores típicos de tablas de referencia (Griffin, Martin, Aulton). El valor de la saponina es aproximado.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- 4. INTERFASES Y MOJADO                                -->
+    <!-- ===================================================== -->
+    <section id="interfases" class="section section--tint">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow"><span class="tag">4</span> Propiedades interfaciales</p>
+          <h2>Tensión superficial, ángulo de contacto, mojado y extensión</h2>
+          <p class="section__intro">La propiedad que el artículo optimiza es el <strong>ángulo de contacto</strong>, es decir, la capacidad <strong>humectante</strong>: qué tan bien un líquido logra mojar un sólido.</p>
+        </header>
+
+        <div class="grid-2 reveal">
+          <div class="prose">
+            <h3>Ecuación de Young: un balance de tres tensiones</h3>
+            <div class="formula">\[ \gamma_{SV} = \gamma_{SL} + \gamma_{LV}\cos\theta \]</div>
+            <p class="small muted">γ = tensión interfacial entre sólido y vapor (SV), sólido y líquido (SL), y líquido y vapor (LV); θ = ángulo de contacto.</p>
+            <ul class="ticks">
+              <li><b>θ &lt; 90°</b>: el líquido moja. <b>θ &gt; 90°</b>: el líquido es repelido. <b>θ → 0°</b>: se extiende por completo.</li>
+              <li>Un tensioactivo baja la tensión líquido–vapor (se adsorbe en la interfase aire-agua) y la tensión sólido–líquido (se adsorbe sobre el sólido). Ambos efectos aumentan cos θ, así que el ángulo baja.</li>
+            </ul>
+            <h4>Adhesión, cohesión y extensión</h4>
+            <div class="formula">\[ W_{\text{adhesión}} = \gamma_{LV}(1+\cos\theta), \quad W_{\text{cohesión}} = 2\gamma_{LV}, \quad S = W_{\text{adhesión}} - W_{\text{cohesión}} \]</div>
+            <p>Un líquido se extiende cuando su adhesión al sólido supera su propia cohesión (coeficiente de extensión S ≥ 0). El agua tiene una cohesión muy alta (72 mN/m); el tensioactivo la reduce y permite la extensión.</p>
+            <div class="callout"><i data-lucide="pill"></i><p><b>En formulación:</b> un polvo hidrofóbico con θ &gt; 90° flota y forma grumos en el vehículo. Por eso toda suspensión necesita un <b>agente humectante</b>, el mismo papel que cumplen estas saponinas.</p></div>
+          </div>
+          <div class="young-demo card">
+            <h3><i data-lucide="sliders-horizontal"></i> Laboratorio de Young</h3>
+            <p class="muted">Mueva las tensiones interfaciales (mN/m) y observe la gota.</p>
+            <svg viewBox="0 0 320 170" class="drop-svg" id="young-svg" role="img" aria-label="Gota sésil sobre una superficie">
+              <rect x="0" y="130" width="320" height="40" class="drop-svg__solid" />
+              <path id="young-drop" class="drop-svg__liquid" d="" />
+              <path id="young-angle" class="drop-svg__angle" d="" />
+              <line id="young-tangent" class="drop-svg__tangent" x1="0" y1="0" x2="0" y2="0" />
+              <text id="young-label" x="160" y="22" text-anchor="middle" class="drop-svg__label">θ</text>
+            </svg>
+            <div class="sliders">
+              <label>Tensión sólido–vapor <output id="o-sv">30</output><input type="range" id="r-sv" min="10" max="72" value="30" /></label>
+              <label>Tensión sólido–líquido <output id="o-sl">40</output><input type="range" id="r-sl" min="0" max="60" value="40" /></label>
+              <label>Tensión líquido–vapor <output id="o-lv">72</output><input type="range" id="r-lv" min="25" max="72" value="72" /></label>
+            </div>
+            <div class="young-out">
+              <div><span>Ángulo</span><b id="young-theta">—</b></div>
+              <div><span>Adhesión</span><b id="young-wa">—</b></div>
+              <div><span>Extensión</span><b id="young-s">—</b></div>
+            </div>
+            <div class="young-presets">
+              <button class="chip" type="button" data-young="72,30,40">Agua sobre sólido hidrofóbico</button>
+              <button class="chip" type="button" data-young="46,30,14">+ saponina (γ ≈ 46)</button>
+              <button class="chip" type="button" data-young="38,30,8">+ lauril sulfato (γ ≈ 38)</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-2 reveal">
+          <figure class="chart-card">
+            <figcaption><h3>Tensión superficial al 1 % (mN/m)</h3><p>Ningún extracto llega al lauril sulfato de sodio, pero todos bajan bastante la del agua (≈ 72 mN/m).</p></figcaption>
+            <div class="chart-box chart-box--tall"><canvas id="ch-st" role="img" aria-label="Tensión superficial por extracto"></canvas></div>
+          </figure>
+          <figure class="chart-card">
+            <figcaption><h3>Ángulo de contacto al 1 % (°)</h3><p>Medido sobre teflón, una superficie hidrofóbica de referencia. Las cortezas de <em>A. pennata</em> y <em>A. chinensis</em> son las que mejor mojan.</p></figcaption>
+            <div class="chart-box chart-box--tall"><canvas id="ch-ca" role="img" aria-label="Ángulo de contacto por extracto"></canvas></div>
+          </figure>
+        </div>
+        <p class="note reveal"><i data-lucide="lightbulb"></i> Menor tensión superficial no siempre significa menor ángulo: la hoja de <em>A. pennata</em> tiene la tensión más baja, pero su corteza moja mejor. El ángulo depende también de cómo se adsorbe el tensioactivo sobre el <em>sólido</em>, no solo en el aire.</p>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- 5. MICELAS, PELÍCULAS Y ESPUMA                        -->
+    <!-- ===================================================== -->
+    <section id="micelas" class="section">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow"><span class="tag">5</span> Soluciones de tensioactivos</p>
+          <h2>Concentración micelar crítica, micelas, películas mixtas y espuma</h2>
+          <p class="section__intro">Al disolver un tensioactivo, sus moléculas primero ocupan la superficie y forman una monocapa. Cuando la superficie se satura, se agrupan en micelas: esa concentración es la concentración micelar crítica.</p>
+        </header>
+
+        <div class="grid-2 reveal">
+          <figure class="chart-card">
+            <figcaption>
+              <h3>Concentración micelar crítica (% peso/volumen)</h3>
+              <p>Extractos frente al lauril sulfato de sodio. Cuanto más baja, más eficiente es el tensioactivo.</p>
+              <div class="seg" role="group" aria-label="Escala del eje">
+                <button type="button" class="seg__btn is-active" data-cmc-scale="log">Logarítmica</button>
+                <button type="button" class="seg__btn" data-cmc-scale="linear">Lineal</button>
+              </div>
+            </figcaption>
+            <div class="chart-box chart-box--tall"><canvas id="ch-cmc" role="img" aria-label="Concentración micelar crítica por extracto frente al lauril sulfato de sodio"></canvas></div>
+          </figure>
+          <div class="prose callout-col">
+            <div class="big-compare">
+              <div><span class="big-compare__v">0.011 %</span><span>Cortezas de <em>A. pennata</em>, <em>A. chinensis</em> y <em>A. auriculiformis</em></span></div>
+              <div class="big-compare__vs">vs</div>
+              <div><span class="big-compare__v big-compare__v--muted">0.24 %</span><span>Lauril sulfato de sodio</span></div>
+            </div>
+            <h3>¿Qué significa un valor tan bajo?</h3>
+            <p>Con muy poco tensioactivo la interfase ya está saturada y empiezan a formarse micelas. Para formular, esto significa <b>menos excipiente para el mismo efecto</b>. Las agliconas grandes de las saponinas son muy hidrofóbicas, así que "escapan" del agua formando micelas a concentraciones bajas.</p>
+            <div class="formula">\[ \Gamma = -\frac{1}{nRT}\frac{d\gamma}{d\ln C} \qquad \pi = \gamma_0-\gamma \]</div>
+            <p class="small muted">Isoterma de adsorción de Gibbs (Γ = exceso superficial) y presión superficial de la monocapa (π).</p>
+          </div>
+        </div>
+
+        <div class="grid-3 reveal">
+          <article class="concept">
+            <i data-lucide="circle-dot"></i>
+            <h3>Micelas: coloides de asociación</h3>
+            <p>Por encima de la concentración micelar crítica aparecen micelas, que son coloides de asociación y solubilizan sustancias lipofílicas. De hecho, el artículo midió esa concentración viendo cuánto naftaleno se disolvía.</p>
+          </article>
+          <article class="concept">
+            <i data-lucide="layers"></i>
+            <h3>Películas mixtas: la razón para mezclar</h3>
+            <p>Dos tensioactivos distintos pueden empacarse mejor juntos que separados. Saponinas con agliconas y azúcares diferentes "rellenan" la interfase. Esa es la <b>sinergia</b> que justifica la mezcla de varias plantas.</p>
+          </article>
+          <article class="concept">
+            <i data-lucide="waves"></i>
+            <h3>Espuma: película viscoelástica</h3>
+            <p>Que una espuma dure depende de la elasticidad de la película entre burbujas. Los azúcares de las saponinas forman puentes de hidrógeno y dan películas muy rígidas.</p>
+          </article>
+        </div>
+
+        <div class="grid-2 reveal">
+          <figure class="chart-card">
+            <figcaption><h3>Altura de espuma (cm)</h3><p>Ensayo de Ross y Miles: al inicio y a los 10 minutos.</p></figcaption>
+            <div class="chart-box chart-box--tall"><canvas id="ch-foam" role="img" aria-label="Altura de espuma a 0 y 10 minutos"></canvas></div>
+          </figure>
+          <figure class="chart-card">
+            <figcaption><h3>Estabilidad de espuma (%)</h3><p>Espuma que queda a los 10 minutos. Línea: 90 %.</p></figcaption>
+            <div class="chart-box chart-box--tall"><canvas id="ch-foamstab" role="img" aria-label="Estabilidad de espuma"></canvas></div>
+          </figure>
+        </div>
+        <p class="note reveal"><i data-lucide="lightbulb"></i> Hacer mucha espuma no es lo mismo que mantenerla: la vaina de <em>G. assamicus</em> generó 5.3 cm y a los 10 minutos conservaba solo el 2 %. Las hojas de <em>A. pennata</em> y <em>A. lucidior</em> y la vaina de <em>A. lucidior</em> conservaron más del 90 %. Para un champú interesan las dos cosas; para una emulsión importa sobre todo la película estable.</p>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- 6. EL ESTUDIO                                         -->
+    <!-- ===================================================== -->
+    <section id="articulo" class="section section--tint">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow"><span class="tag">6</span> El estudio en detalle</p>
+          <h2>Las plantas, los extractos y qué se midió</h2>
+          <p class="section__intro">Cinco especies de leguminosas que comunidades del noreste de India usan tradicionalmente como "plantas jabón". Se obtuvieron 11 extractos acuosos de vaina, hoja o corteza. Pulse un órgano para ver su perfil como tensioactivo.</p>
+        </header>
+
+        <div class="plant-grid" id="plant-grid"></div>
+        <div class="extract-detail card reveal" id="extract-detail" aria-live="polite"></div>
+
+        <div class="grid-2 reveal">
+          <figure class="chart-card">
+            <figcaption><h3>Contenido total de saponinas (% peso/peso)</h3><p>Cuánta saponina tiene cada extracto.</p></figcaption>
+            <div class="chart-box chart-box--tall"><canvas id="ch-saponin" aria-label="Contenido total de saponinas por extracto" role="img"></canvas></div>
+          </figure>
+          <figure class="chart-card">
+            <figcaption><h3>Cantidad no es calidad</h3><p>Más saponina no significa mejor tensioactivo: la vaina de <em>A. auriculiformis</em> tiene la mayor cantidad y la peor concentración micelar crítica.</p></figcaption>
+            <div class="chart-box chart-box--tall"><canvas id="ch-sap-cmc" aria-label="Dispersión de contenido de saponinas frente a concentración micelar crítica" role="img"></canvas></div>
+          </figure>
+        </div>
+
+        <details class="annex reveal">
+          <summary><i data-lucide="microscope"></i> Anexo: cómo se obtuvieron y midieron (resumen breve)</summary>
+          <div class="annex__body">
+            <div class="annex__grid">
+              <div><b>Extracción</b><p>Con agua caliente en autoclave (121 °C, 15 minutos), filtración, centrifugación y liofilización. Sin solventes orgánicos.</p></div>
+              <div><b>¿Hay saponinas?</b><p>Se confirmó con espectroscopia ultravioleta-visible, espectroscopia infrarroja y cromatografía líquida acoplada a espectrometría de masas.</p></div>
+              <div><b>¿Cuántas?</b><p>Ensayo colorimétrico con vainillina y ácido sulfúrico, comparado con un estándar de saponina de <em>Quillaja</em>.</p></div>
+              <div><b>Propiedades tensioactivas</b><p>Espuma (ensayo de Ross y Miles), concentración micelar crítica (solubilización de naftaleno), tensión superficial (placa de Wilhelmy) y ángulo de contacto (gota depositada).</p></div>
+            </div>
+            <p class="note"><i data-lucide="info"></i> Estas técnicas solo confirman la identidad y miden. Para formular, lo importante son las propiedades resultantes: balance hidrofílico-lipofílico, concentración micelar crítica, tensión superficial, ángulo de contacto, espuma y emulsificación.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- 7. FORMULACIÓN: MÉTODO TAGUCHI                        -->
+    <!-- ===================================================== -->
+    <section id="taguchi" class="section">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow"><span class="tag">7</span> Diseño de la formulación</p>
+          <h2>¿Cómo escoger la mejor mezcla de tensioactivos con pocos lotes?</h2>
+          <p class="section__intro">Con 4 grupos de extractos y varias opciones por grupo hay 32 mezclas posibles. El método de Taguchi, un tipo de diseño de experimentos, permitió preparar solo <b>8</b> y aun así predecir la mejor. Cada extracto se usó al 0.25 % (mezcla total al 1 %). La meta: el menor ángulo de contacto posible.</p>
+        </header>
+
+        <div class="factor-legend reveal" id="factor-legend"></div>
+
+        <div class="table-wrap reveal">
+          <table class="table table--l8" id="l8-table"><caption>Las 8 mezclas preparadas y su ángulo de contacto (pulse una fila para llevarla al simulador)</caption></table>
+        </div>
+
+        <div class="grid-2 reveal">
+          <figure class="chart-card">
+            <figcaption>
+              <h3>Efecto de cada extracto</h3>
+              <p>Ángulo promedio de las mezclas que contienen cada extracto. Por debajo de la línea (80.0°) el extracto ayuda a mojar.</p>
+              <div class="seg" role="group" aria-label="Métrica">
+                <button type="button" class="seg__btn is-active" data-me="mean">Ángulo medio (°)</button>
+                <button type="button" class="seg__btn" data-me="sn">Relación señal/ruido</button>
+              </div>
+            </figcaption>
+            <div class="chart-box chart-box--xtall"><canvas id="ch-main" role="img" aria-label="Gráfico de efectos principales"></canvas></div>
+          </figure>
+          <figure class="chart-card">
+            <figcaption><h3>¿Qué grupo pesa más?</h3><p>Análisis de varianza: porcentaje de la variación del ángulo que explica cada grupo.</p></figcaption>
+            <div class="chart-box chart-box--xtall"><canvas id="ch-anova" role="img" aria-label="Contribución porcentual de cada grupo"></canvas></div>
+          </figure>
+        </div>
+
+        <div class="grid-2 grid-2--wide reveal">
+          <div class="prose">
+            <h3>Lectura en clave de formulación</h3>
+            <ul class="ticks">
+              <li><b>Grupo C (cerca del 55 %)</b>: elegir la hoja de <em>A. auriculiformis</em> en lugar de la vaina de <em>G. assamicus</em> es la decisión que más mejora el mojado. Es el único efecto estadísticamente significativo (p = 0.047).</li>
+              <li><b>Grupo A (cerca del 40 %)</b>: la corteza de <em>A. chinensis</em> es el mejor componente entre los de espuma muy estable.</li>
+              <li><b>Grupos B y D</b>: influyen poco. Se pueden escoger por otros criterios, como costo, disponibilidad, espuma o sostenibilidad.</li>
+            </ul>
+            <p>Es el mismo razonamiento de cualquier formulación: identificar qué excipiente controla la propiedad crítica y cuáles son intercambiables.</p>
+            <div class="formula">\[ \hat{\theta}_{\text{óptimo}} = \bar{\theta} + \sum_{k}\left(\bar{\theta}_{k}-\bar{\theta}\right) = 80.0 - 3.5 - 0.2 - 2.7 - 0.8 = 72.8^\circ \]</div>
+            <p class="small muted">θ̄ = promedio de las 8 mezclas; θ̄<sub>k</sub> = promedio de las mezclas que contienen el extracto elegido en cada grupo.</p>
+          </div>
+          <div class="optimum card">
+            <h3><i data-lucide="target"></i> Mezcla óptima</h3>
+            <div class="optimum__combo" id="optimum-combo"></div>
+            <div class="optimum__nums">
+              <div><span>Predicho</span><b>72.8°</b></div>
+              <div><span>Experimental</span><b class="accent">74.0°</b></div>
+              <div><span>Diferencia</span><b>≈ 1.2°</b></div>
+              <div><span>Ajuste del modelo</span><b>99.7 %</b></div>
+            </div>
+            <div class="chart-box chart-box--short"><canvas id="ch-valid" role="img" aria-label="Predicho frente a experimental"></canvas></div>
+            <p class="muted small">La mejor de las 8 (mezcla 8) dio 75.0°. La mezcla óptima no estaba entre las 8, así que se preparó aparte para confirmar la predicción. El ajuste es el coeficiente de determinación R² (ajustado: 97.9 %).</p>
+          </div>
+        </div>
+
+        <details class="annex reveal">
+          <summary><i data-lucide="sigma"></i> Tabla completa del análisis de varianza</summary>
+          <div class="annex__body">
+            <div class="table-wrap"><table class="table table--data" id="anova-table"><caption>Análisis de varianza del ángulo de contacto (recalculado a partir de la Tabla 2 del artículo)</caption></table></div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- 8. APLICACIÓN EN SISTEMAS HETERODISPERSOS             -->
+    <!-- ===================================================== -->
+    <section id="aplicaciones" class="section section--tint">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow"><span class="tag">8</span> Sistemas heterodispersos</p>
+          <h2>¿Sirve en emulsiones, suspensiones y productos cosméticos?</h2>
+          <p class="section__intro">La mezcla óptima (al 1 %) se probó en dos situaciones reales: emulsionar aceite de coco y mojar cabello humano.</p>
+        </header>
+
+        <div class="tabs reveal" data-tabs>
+          <div class="tabs__list" role="tablist" aria-label="Aplicaciones">
+            <button role="tab" aria-selected="true" aria-controls="ap-emul" id="ta-emul"><i data-lucide="droplets"></i> Emulsiones</button>
+            <button role="tab" aria-selected="false" aria-controls="ap-susp" id="ta-susp" tabindex="-1"><i data-lucide="sparkles"></i> Suspensiones</button>
+            <button role="tab" aria-selected="false" aria-controls="ap-hair" id="ta-hair" tabindex="-1"><i data-lucide="scissors"></i> Cabello y cosmética</button>
+          </div>
+
+          <!-- Emulsiones -->
+          <div class="tabs__panel" role="tabpanel" id="ap-emul" aria-labelledby="ta-emul">
+            <div class="grid-2">
+              <figure class="chart-card">
+                <figcaption><h3>Índice de emulsificación</h3><p>Aceite de coco 1:1, agitación a 2000 revoluciones por minuto durante 3 minutos y centrifugación a 3200 revoluciones por minuto durante 5 minutos.</p></figcaption>
+                <div class="chart-box"><canvas id="ch-e24" role="img" aria-label="Índice de emulsificación"></canvas></div>
+              </figure>
+              <div class="prose">
+                <div class="formula">\[ \text{Índice de emulsificación} = \frac{h_{\text{capa emulsionada}}}{h_{\text{total}}}\times 100 \]</div>
+                <p>La centrifugación acelera la <b>separación por densidad</b> (cremado). La ley de Stokes explica por qué funciona como prueba acelerada:</p>
+                <div class="formula">\[ v = \frac{2r^2(\rho_1-\rho_2)\,g}{9\eta} \]</div>
+                <ul class="ticks">
+                  <li><b>56.8 %</b> sigue emulsionado con la mezcla, frente a 69.8 % con lauril sulfato de sodio: es un emulgente aceptable para aceite en agua, aunque menos potente.</li>
+                  <li>Mecanismo: <b>película interfacial rígida</b> y <b>repulsión estérica</b> de los azúcares. Protege sobre todo contra la <b>coalescencia</b>.</li>
+                  <li>Por su balance hidrofílico-lipofílico alto y su solubilidad en agua (regla de Bancroft), favorece las emulsiones de <b>aceite en agua</b>.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="instab reveal">
+              <h3>Inestabilidades de una emulsión y qué aporta la saponina</h3>
+              <div class="instab__grid">
+                <div><b>Cremado o sedimentación</b><span>Reversible. Depende del tamaño de gota y de la viscosidad (ley de Stokes).</span><em>Es lo que mide el índice de emulsificación. La saponina sola no aumenta la viscosidad: haría falta un agente viscosante.</em></div>
+                <div><b>Floculación</b><span>Las gotas se agrupan sin fusionarse.</span><em>Los azúcares voluminosos dan repulsión estérica.</em></div>
+                <div><b>Coalescencia y ruptura</b><span>Irreversible: la película se rompe.</span><em>Es donde más ayuda: su película interfacial es muy viscoelástica.</em></div>
+                <div><b>Inversión de fases</b><span>De aceite en agua a agua en aceite, o al revés, por cambio en la relación de fases o en el balance del emulgente.</span><em>Con un balance alto se mantiene aceite en agua; no se evaluó en el artículo.</em></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Suspensiones -->
+          <div class="tabs__panel" role="tabpanel" id="ap-susp" aria-labelledby="ta-susp" hidden>
+            <div class="grid-2">
+              <div class="prose">
+                <h3>De mojar teflón a mojar un polvo</h3>
+                <p>El artículo no formuló suspensiones, pero lo que midió (el ángulo de contacto sobre una superficie hidrofóbica) es justo la propiedad que define a un <b>agente humectante</b> para suspensiones.</p>
+                <ol class="steps">
+                  <li><b>Humectación</b>: el líquido debe desplazar el aire de la superficie del polvo. Requiere un ángulo bajo; si θ &gt; 90°, el polvo flota.</li>
+                  <li><b>Dispersión</b>: las partículas mojadas se separan con agitación.</li>
+                  <li><b>Estabilización</b>: control de la floculación (carga, electrolitos) y de la sedimentación (viscosidad, tamaño de partícula).</li>
+                </ol>
+                <p>Un extracto como la corteza de <em>A. pennata</em> (64°) podría servir como humectante natural de principios activos hidrofóbicos. Habría que comprobar su compatibilidad, su efecto sobre la floculación y su comportamiento con el agente suspensor.</p>
+              </div>
+              <div class="wet-steps card">
+                <h3><i data-lucide="flask-conical"></i> Del ángulo al comportamiento del polvo</h3>
+                <div class="wet-row"><span class="wet-row__t">θ ≈ 105°</span><span class="wet-row__d">Agua sobre superficie grasa: <b>no moja</b>, el sólido flota.</span></div>
+                <div class="wet-row"><span class="wet-row__t">θ ≈ 90°</span><span class="wet-row__d">Límite: el sólido queda en la superficie con aire atrapado.</span></div>
+                <div class="wet-row wet-row--ok"><span class="wet-row__t">θ ≈ 64–74°</span><span class="wet-row__d">Mejores extractos y mezcla óptima: <b>moja</b>, el sólido se incorpora.</span></div>
+                <div class="wet-row wet-row--ok"><span class="wet-row__t">θ → 0°</span><span class="wet-row__d">Extensión completa (coeficiente de extensión ≥ 0).</span></div>
+                <p class="muted small">Así se comparan en el laboratorio distintos humectantes (tensioactivos, polioles, hidrocoloides) frente a un mismo sólido.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cabello -->
+          <div class="tabs__panel" role="tabpanel" id="ap-hair" aria-labelledby="ta-hair" hidden>
+            <div class="grid-2">
+              <figure class="chart-card">
+                <figcaption><h3>Ángulo de contacto en cabello (1 segundo)</h3><p>Agua ultrapura frente a la mezcla óptima.</p></figcaption>
+                <div class="chart-box"><canvas id="ch-hair" role="img" aria-label="Ángulo de contacto en cabello virgen y decolorado"></canvas></div>
+              </figure>
+              <figure class="chart-card">
+                <figcaption><h3>Extensión de la gota en 60 segundos</h3><p>La gota sigue extendiéndose con el tiempo.</p></figcaption>
+                <div class="chart-box"><canvas id="ch-spread" role="img" aria-label="Evolución del ángulo de contacto en el tiempo"></canvas></div>
+              </figure>
+            </div>
+            <div class="hair-diagram card">
+              <div class="hair-diagram__head">
+                <h3><i data-lucide="scissors"></i> ¿Por qué el cabello decolorado se moja más?</h3>
+                <div class="seg" role="group" aria-label="Estado del cabello">
+                  <button type="button" class="seg__btn is-active" data-hair="virgin">Virgen</button>
+                  <button type="button" class="seg__btn" data-hair="bleached">Decolorado</button>
+                </div>
+              </div>
+              <div class="hair-diagram__body">
+                <svg viewBox="0 0 640 260" class="hair-svg" id="hair-svg" role="img" aria-label="Esquema de la superficie de la cutícula capilar">
+                  <defs>
+                    <linearGradient id="g-cortex" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stop-color="var(--hair-cuticle)" />
+                      <stop offset="1" stop-color="var(--hair-cortex)" />
+                    </linearGradient>
+                  </defs>
+                  <rect x="0" y="170" width="640" height="90" fill="url(#g-cortex)" />
+                  <g id="hair-scales"></g>
+                  <g id="hair-mea"></g>
+                  <g id="hair-cys"></g>
+                  <path id="hair-drop" class="hair-svg__drop" d="" />
+                  <text x="16" y="250" class="hair-svg__txt">Corteza (queratina, melanina)</text>
+                  <text x="16" y="160" class="hair-svg__txt" id="hair-layer-label">Capa lipídica F</text>
+                  <text x="470" y="40" class="hair-svg__big" id="hair-theta">θ ≈ 106°</text>
+                </svg>
+                <ul class="ticks hair-explain" id="hair-explain"></ul>
+              </div>
+            </div>
+            <p class="note"><i data-lucide="pill"></i> Lo mismo pasa con la piel o con un polvo: el estado de la superficie (lípidos, carga, rugosidad) cambia la humectación tanto como el tensioactivo. Por eso un mismo excipiente se comporta distinto según el sustrato.</p>
+          </div>
+        </div>
+
+        <div class="hair-stats reveal">
+          <div class="hair-stat"><span class="hair-stat__label">Emulsión de aceite en agua</span><span class="hair-stat__v">56.8 % emulsionado</span><span class="hair-stat__d">81 % del valor del lauril sulfato</span></div>
+          <div class="hair-stat"><span class="hair-stat__label">Cabello virgen</span><span class="hair-stat__v">105.9° <i data-lucide="arrow-right"></i> 73.3°</span><span class="hair-stat__d">Baja 32.6°</span></div>
+          <div class="hair-stat hair-stat--warm"><span class="hair-stat__label">Cabello decolorado</span><span class="hair-stat__v">81.7° <i data-lucide="arrow-right"></i> 47.6°</span><span class="hair-stat__d">Baja 34.1°</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- 9. SIMULADOR                                          -->
+    <!-- ===================================================== -->
+    <section id="simulador" class="section">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow"><span class="tag">9</span> Herramienta interactiva</p>
+          <h2>Simulador: arme su propia mezcla de saponinas</h2>
+          <p class="section__intro">Elija un extracto de cada grupo. El simulador usa el modelo del estudio (promedio general más el efecto de cada extracto) para estimar el ángulo de contacto de cualquiera de las 32 mezclas posibles.</p>
+        </header>
+
+        <div class="sim reveal">
+          <div class="sim__controls" id="sim-controls"></div>
+
+          <div class="sim__result card">
+            <div class="sim__drop">
+              <svg viewBox="0 0 300 150" class="drop-svg" id="sim-svg" role="img" aria-label="Gota con el ángulo de contacto estimado">
+                <rect x="0" y="118" width="300" height="32" class="drop-svg__solid" />
+                <path id="sim-drop" class="drop-svg__liquid" d="" />
+                <path id="sim-arc" class="drop-svg__angle" d="" />
+              </svg>
+              <div class="sim__theta"><span>Ángulo estimado</span><b id="sim-theta">—</b></div>
+            </div>
+            <div class="sim__eq" id="sim-eq"></div>
+            <div class="sim__bars" id="sim-bars"></div>
+            <div class="sim__meta">
+              <div><span>Señal/ruido</span><b id="sim-sn">—</b></div>
+              <div><span>Posición</span><b id="sim-rank">—</b></div>
+              <div><span>Dato real</span><b id="sim-exp">—</b></div>
+            </div>
+            <div class="sim__actions">
+              <button type="button" class="btn btn--primary" id="sim-optimum"><i data-lucide="target"></i> Ir al óptimo</button>
+              <button type="button" class="btn" id="sim-worst"><i data-lucide="trending-up"></i> Peor mezcla</button>
+              <button type="button" class="btn" id="sim-random"><i data-lucide="shuffle"></i> Aleatoria</button>
+            </div>
+            <p class="muted small">El modelo supone que los extractos no interactúan entre sí y solo vale dentro de lo ensayado (cada extracto al 0.25 %).</p>
+          </div>
+        </div>
+
+        <figure class="chart-card reveal">
+          <figcaption><h3>Las 32 mezclas posibles, ordenadas</h3><p>En oscuro, las 8 que se prepararon realmente; en dorado, su selección. Pulse una barra para cargarla.</p></figcaption>
+          <div class="chart-box"><canvas id="ch-all" role="img" aria-label="Ángulo predicho para las 32 mezclas"></canvas></div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- 10. GLOSARIO                                          -->
+    <!-- ===================================================== -->
+    <section id="glosario" class="section section--tint">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow"><span class="tag">10</span> Referencia</p>
+          <h2>Glosario</h2>
+          <p class="section__intro">Búsqueda en tiempo real por término o definición; filtre por categoría y pulse una tarjeta para ampliarla.</p>
+        </header>
+        <div class="glossary-tools reveal">
+          <label class="search">
+            <i data-lucide="search"></i>
+            <input type="search" id="glossary-search" placeholder="Buscar: balance, coalescencia, Young, micela…" autocomplete="off" aria-label="Buscar en el glosario" />
+          </label>
+          <div class="filters" id="glossary-filters" role="group" aria-label="Filtrar por categoría"></div>
+        </div>
+        <p class="muted small" id="glossary-count" aria-live="polite"></p>
+        <div class="glossary-grid" id="glossary-grid"></div>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- 11. CIERRE                                            -->
+    <!-- ===================================================== -->
+    <section id="cierre" class="section">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow"><span class="tag">11</span> Cierre</p>
+          <h2>Lectura crítica y conclusiones</h2>
+        </header>
+
+        <div class="grid-2 reveal">
+          <div>
+            <h3 class="h-sub"><i data-lucide="scale"></i> Aciertos y limitaciones</h3>
+            <div class="critique" id="critique"></div>
+          </div>
+          <div>
+            <h3 class="h-sub"><i data-lucide="pill"></i> Lo que nos llevamos para formular</h3>
+            <div class="rel-list">
+              <article class="rel"><b>Elegir un tensioactivo no es solo mirar la tensión superficial</b><p>También cuentan la concentración micelar crítica, el ángulo de contacto, la estabilidad de la película y la compatibilidad. El lauril sulfato gana en tensión superficial y la saponina gana en concentración micelar crítica.</p></article>
+              <article class="rel"><b>Mezclar puede ser mejor que usar uno solo</b><p>Es la lógica de las películas mixtas y de combinar emulgentes: la interfase resulta más estable.</p></article>
+              <article class="rel"><b>El sustrato importa</b><p>El mismo tensioactivo moja distinto un cabello virgen, uno decolorado o un polvo hidrofóbico.</p></article>
+              <article class="rel"><b>Formular con método</b><p>Un diseño de experimentos reduce lotes y dice qué excipiente controla la propiedad crítica.</p></article>
+              <article class="rel"><b>Natural no significa listo</b><p>Falta estandarizar el extracto y evaluar estabilidad en el tiempo, irritación, compatibilidad y conservación.</p></article>
+            </div>
+          </div>
+        </div>
+
+        <div class="questions card reveal">
+          <h3><i data-lucide="message-circle-question"></i> Preguntas para la discusión</h3>
+          <ol>
+            <li>Si quisieran usar la mezcla de saponinas en una emulsión de aceite mineral en agua (balance requerido cercano a 10.5), ¿con qué co-emulgente de balance bajo la combinarían y en qué proporción?</li>
+            <li>¿Por qué la vaina de <em>A. auriculiformis</em>, con la mayor cantidad de saponinas, tiene la peor concentración micelar crítica? ¿Qué nos dice esto sobre cómo elegir un excipiente natural?</li>
+            <li>El índice de emulsificación bajó del 69.8 % (lauril sulfato) al 56.8 %. ¿Qué excipiente agregarían para mejorar la estabilidad física de esa emulsión? Piensen en la ley de Stokes.</li>
+            <li>¿Podría la mezcla servir como agente humectante en una suspensión de un activo hidrofóbico? ¿Qué ensayos harían primero?</li>
+            <li>¿Es el teflón un buen modelo para predecir cómo se mojarán la piel, el cabello o un polvo farmacéutico?</li>
+          </ol>
+        </div>
+
+        <div class="conclusion reveal">
+          <h3>Conclusión</h3>
+          <p>Las saponinas de <em>A. chinensis</em> (corteza), <em>A. auriculiformis</em> (vaina y hoja) y <em>A. pennata</em> (corteza), mezcladas con el método de Taguchi, forman un tensioactivo natural con varias ventajas. Su concentración micelar crítica es unas 20 veces menor que la del lauril sulfato de sodio, moja bien (74.0°), emulsiona de forma aceptable (56.8 %) y humecta con fuerza el cabello. Es un caso real de cómo los conceptos de tensioactivos, balance hidrofílico-lipofílico, interfases y estabilidad sirven para diseñar un excipiente nuevo para sistemas heterodispersos. También muestra lo que todavía falta para llevarlo a un producto.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <p class="footer__title">Seminario 1 · Farmacotecnia II · Universidad Nacional de Colombia</p>
+        <p class="muted small">Docente: Prof. Yolima Baena Aristizábal · Integrantes: Cesar Diaz Suarez, Lina Ramirez, Diana Arguello, Sebastian Roa, Edward Benitez, Paula Melo.</p>
+        <p class="muted small">Viswam V.G., Rao K.J., Tarangini K., Kalita S., Mahanta D. (2026). <em>Next Materials</em>, 12, 102197. <a href="https://doi.org/10.1016/j.nxmate.2026.102197" target="_blank" rel="noopener">doi.org/10.1016/j.nxmate.2026.102197</a> · Valores de las figuras leídos gráficamente (±0.1). Análisis de varianza recalculado a partir de la Tabla 2.</p>
+      </div>
+      <a href="#portada" class="btn"><i data-lucide="arrow-up"></i> Portada</a>
+    </div>
+  </footer>
+
+  <!-- Scripts clásicos (no type="module") para que funcionen también con file:// -->
+  <script defer src="assets/data/data-bundle.js"></script>
+  <script defer src="js/charts.js"></script>
+  <script defer src="js/glossary.js"></script>
+  <script defer src="js/simulator.js"></script>
+  <script defer src="js/main.js"></script>
+</body>
+</html>
